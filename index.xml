@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Kavindu Udara</title>
+    <link>https://kavindu-udara.github.io/me/</link>
+    <description>Recent content on Kavindu Udara</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 01 Dec 2024 19:54:46 +0530</lastBuildDate>
+    <atom:link href="https://kavindu-udara.github.io/me/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>My Blog</title>
+      <link>https://kavindu-udara.github.io/me/posts/my-blog/</link>
+      <pubDate>Sun, 01 Dec 2024 19:54:46 +0530</pubDate>
+      <guid>https://kavindu-udara.github.io/me/posts/my-blog/</guid>
+      <description>&lt;h3 id=&#34;hello-this-is-my-blog-hehe&#34;&gt;Hello this is my blog hehe&lt;/h3&gt;&#xA;&lt;h3 id=&#34;why-test-execution-is-crucial&#34;&gt;Why Test Execution Is Crucial?&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Ensures that the application works as intended and meets the defined requirements.&lt;/li&gt;&#xA;&lt;li&gt;Identifies and resolves defects, improving software quality.&lt;/li&gt;&#xA;&lt;li&gt;Provides confidence to stakeholders before deployment.&lt;/li&gt;&#xA;&lt;li&gt;Validates the readiness of the application for real-world use through UAT.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;By following this structured approach, Test Execution helps identify gaps and ensures the delivery of a stable, functional, and user-accepted application.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>New_post</title>
+      <link>https://kavindu-udara.github.io/me/posts/new_post/</link>
+      <pubDate>Sun, 01 Dec 2024 19:32:49 +0530</pubDate>
+      <guid>https://kavindu-udara.github.io/me/posts/new_post/</guid>
+      <description>&lt;h3 id=&#34;why-test-execution-is-crucial&#34;&gt;Why Test Execution Is Crucial?&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Ensures that the application works as intended and meets the defined requirements.&lt;/li&gt;&#xA;&lt;li&gt;Identifies and resolves defects, improving software quality.&lt;/li&gt;&#xA;&lt;li&gt;Provides confidence to stakeholders before deployment.&lt;/li&gt;&#xA;&lt;li&gt;Validates the readiness of the application for real-world use through UAT.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;By following this structured approach, Test Execution helps identify gaps and ensures the delivery of a stable, functional, and user-accepted application.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>My First Page</title>
+      <link>https://kavindu-udara.github.io/me/posts/my-first-page/</link>
+      <pubDate>Sun, 01 Dec 2024 17:44:11 +0530</pubDate>
+      <guid>https://kavindu-udara.github.io/me/posts/my-first-page/</guid>
+      <description>&lt;h3 id=&#34;why-test-execution-is-crucial&#34;&gt;Why Test Execution Is Crucial?&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Ensures that the application works as intended and meets the defined requirements.&lt;/li&gt;&#xA;&lt;li&gt;Identifies and resolves defects, improving software quality.&lt;/li&gt;&#xA;&lt;li&gt;Provides confidence to stakeholders before deployment.&lt;/li&gt;&#xA;&lt;li&gt;Validates the readiness of the application for real-world use through UAT.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;By following this structured approach, Test Execution helps identify gaps and ensures the delivery of a stable, functional, and user-accepted application.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Hi! I’m Kavindu, and I like to make memes and dreams and software.</title>
+      <link>https://kavindu-udara.github.io/me/aboutme/aboutme/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://kavindu-udara.github.io/me/aboutme/aboutme/</guid>
+      <description>&lt;h2 id=&#34;a-student-loves-to-learn-new-things&#34;&gt;A student loves to Learn New Things&lt;/h2&gt;&#xA;&lt;h4 id=&#34;im-the-senior-director-of-developer-advocacy-at-github-outside-of-that-fancy-title-im-a-startup-advisor-and-investor-open-source-er-and-meme-maker-on-the-internet-i-enjoy-building-mechanical-keyboards-playing-music-hanging-out-with-my-family-and-friends-and-teaching-in-my-free-time&#34;&gt;I’m the Senior Director of Developer Advocacy at GitHub! Outside of that fancy title, I’m a startup advisor and investor, open source-er, and meme-maker on the internet. I enjoy building mechanical keyboards, playing music, hanging out with my family and friends, and teaching in my free time.&lt;/h4&gt;</description>
+    </item>
+  </channel>
+</rss>
