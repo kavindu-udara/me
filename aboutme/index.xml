@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Aboutmes on Kavindu Udara</title>
+    <link>https://kavindu-udara.github.io/me/aboutme/</link>
+    <description>Recent content in Aboutmes on Kavindu Udara</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <atom:link href="https://kavindu-udara.github.io/me/aboutme/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hi! I’m Kavindu, and I like to make memes and dreams and software.</title>
+      <link>https://kavindu-udara.github.io/me/aboutme/aboutme/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://kavindu-udara.github.io/me/aboutme/aboutme/</guid>
+      <description>&lt;h2 id=&#34;a-student-loves-to-learn-new-things&#34;&gt;A student loves to Learn New Things&lt;/h2&gt;&#xA;&lt;h4 id=&#34;im-the-senior-director-of-developer-advocacy-at-github-outside-of-that-fancy-title-im-a-startup-advisor-and-investor-open-source-er-and-meme-maker-on-the-internet-i-enjoy-building-mechanical-keyboards-playing-music-hanging-out-with-my-family-and-friends-and-teaching-in-my-free-time&#34;&gt;I’m the Senior Director of Developer Advocacy at GitHub! Outside of that fancy title, I’m a startup advisor and investor, open source-er, and meme-maker on the internet. I enjoy building mechanical keyboards, playing music, hanging out with my family and friends, and teaching in my free time.&lt;/h4&gt;</description>
+    </item>
+  </channel>
+</rss>

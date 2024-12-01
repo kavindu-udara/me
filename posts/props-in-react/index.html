@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html><head lang="en">
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Props in React - Kavindu Udara</title><meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Props (short for properties) are used to pass data from a parent component to a child component. Props are read-only, meaning they cannot be modified by the child component receiving them.
+
+Key Features of Props
+
+Passed as an object to the component.
+Immutable (cannot be changed by the component receiving them).
+Used for dynamic data and reusability.
+
+
+How to Pass Props Between Components
+
+
+Define props in the parent component
+function Parent() {
+const name = &#34;John&#34;;
+return &lt;Child name={name} /&gt;;
+}
+
+
+Access props in the child component" />
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content="https://kavindu-udara.github.io/me/posts/props-in-react/">
+  <meta property="og:site_name" content="Kavindu Udara">
+  <meta property="og:title" content="Props in React">
+  <meta property="og:description" content="Props (short for properties) are used to pass data from a parent component to a child component. Props are read-only, meaning they cannot be modified by the child component receiving them.
+Key Features of Props Passed as an object to the component. Immutable (cannot be changed by the component receiving them). Used for dynamic data and reusability. How to Pass Props Between Components Define props in the parent component
+function Parent() { const name = &#34;John&#34;; return &lt;Child name={name} /&gt;; } Access props in the child component">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2024-12-01T21:29:05+05:30">
+    <meta property="article:modified_time" content="2024-12-01T21:29:05+05:30">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Props in React">
+  <meta name="twitter:description" content="Props (short for properties) are used to pass data from a parent component to a child component. Props are read-only, meaning they cannot be modified by the child component receiving them.
+Key Features of Props Passed as an object to the component. Immutable (cannot be changed by the component receiving them). Used for dynamic data and reusability. How to Pass Props Between Components Define props in the parent component
+function Parent() { const name = &#34;John&#34;; return &lt;Child name={name} /&gt;; } Access props in the child component">
+<script src="https://kavindu-udara.github.io/me/js/feather.min.js"></script>
+	
+	
+        <link href="https://kavindu-udara.github.io/me/css/fonts.11a1877508139eac0b5b4852ceb110c35641b3533321e66e39149e901ed5756b.css" rel="stylesheet">
+	
+
+	
+	<link rel="stylesheet" type="text/css" media="screen" href="https://kavindu-udara.github.io/me/css/main.e8acf5f1d8afb7069a7e03e999aa16996a78ba6cf03f85597be93da0389727fd.css" />
+		<link id="darkModeStyle" rel="stylesheet" type="text/css" href="https://kavindu-udara.github.io/me/css/dark.1574c9217544c040ca2a05dd8ea37835a3f9df3b32177611e409f59bbf547fca.css"  disabled />
+	
+
+	
+	
+		<script type="text/javascript"
+		src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+		</script>
+
+		
+		<script type="text/x-mathjax-config">
+		MathJax.Hub.Config({
+			tex2jax: {
+				inlineMath: [['$','$'], ['\\(','\\)']],
+				displayMath: [['$$','$$'], ['\[','\]']],
+				processEscapes: true,
+				processEnvironments: true,
+				skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+				TeX: { equationNumbers: { autoNumber: "AMS" },
+						 extensions: ["AMSmath.js", "AMSsymbols.js"] }
+			}
+		});
+		</script>
+	
+
+	
+	
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css">
+		<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.js"></script>
+		<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body);"></script>
+
+		
+		<script>
+			document.addEventListener("DOMContentLoaded", function() {
+					renderMathInElement(document.body, {
+							delimiters: [
+									{left: "$$", right: "$$", display: true},
+									{left: "$", right: "$", display: false}
+							]
+					});
+			});
+			</script>
+	
+
+	
+</head>
+<body>
+        <div class="content"><header>
+	<div class="aboutmedev">
+		<div class="aboutmetextdev">
+			<div >Kavindu udara</div>
+			<div style="opacity: 40%;">Software Engineer</div>
+		</div>
+			<img class="aboutmeimage" src="https://avatars.githubusercontent.com/u/155027870?v=4" alt="github-profile-image" style="border-radius: 50%; width: 20%;">
+	</div>
+	<nav style="width: 100%; display: flex; justify-content: center; gap: 10px;">
+		
+		<a href="https://kavindu-udara.github.io/me/">home</a>
+		
+		<a href="https://kavindu-udara.github.io/me/posts">blog</a>
+		
+		<a href="https://github.com/kavindu-udara">github</a>
+		
+		<a href="https://x.com/udarakavindu99">twitter</a>
+		
+		<a href="https://www.linkedin.com/in/kavindu-udara-sampath-karunasinghe">linkedin</a>
+		
+		| <span id="dark-mode-toggle" onclick="toggleTheme()"></span>
+		<script src="https://kavindu-udara.github.io/me/js/themetoggle.js"></script>
+		
+	</nav>
+</header>
+
+<main>
+	<article>
+		<div class="title">
+			<h1 class="title">Props in React</h1>
+			<div class="meta">Posted on Dec 1, 2024</div>
+		</div>
+		
+
+		
+
+		<section class="body">
+			<p><strong>Props</strong> (short for properties) are used to pass data from a parent component to a child component. Props are <strong>read-only</strong>, meaning they cannot be modified by the child component receiving them.</p>
+<hr>
+<h3 id="key-features-of-props">Key Features of Props</h3>
+<ul>
+<li>Passed as an object to the component.</li>
+<li>Immutable (cannot be changed by the component receiving them).</li>
+<li>Used for dynamic data and reusability.</li>
+</ul>
+<hr>
+<h3 id="how-to-pass-props-between-components">How to Pass Props Between Components</h3>
+<ol>
+<li>
+<p>Define props in the parent component</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-jsx" data-lang="jsx"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">Parent</span>() {
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;John&#34;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">return</span> &lt;<span style="color:#f92672">Child</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span>{<span style="color:#a6e22e">name</span>} /&gt;;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div></li>
+<li>
+<p>Access props in the child component</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-jsx" data-lang="jsx"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">Child</span>(<span style="color:#a6e22e">props</span>) {
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">return</span> &lt;<span style="color:#f92672">h1</span>&gt;<span style="color:#a6e22e">Hello</span>, {<span style="color:#a6e22e">props</span>.<span style="color:#a6e22e">name</span>}<span style="color:#f92672">!</span>&lt;/<span style="color:#f92672">h1</span>&gt;;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div></li>
+<li>
+<p>Destructure props for cleaner syntax</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-jsx" data-lang="jsx"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">Child</span>({ <span style="color:#a6e22e">name</span> }) {
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">return</span> &lt;<span style="color:#f92672">h1</span>&gt;<span style="color:#a6e22e">Hello</span>, {<span style="color:#a6e22e">name</span>}<span style="color:#f92672">!</span>&lt;/<span style="color:#f92672">h1</span>&gt;;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div></li>
+</ol>
+<hr>
+<h3 id="example-of-props">Example of Props</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-jsx" data-lang="jsx"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">Button</span>({ <span style="color:#a6e22e">label</span>, <span style="color:#a6e22e">onClick</span> }) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> &lt;<span style="color:#f92672">button</span> <span style="color:#a6e22e">onClick</span><span style="color:#f92672">=</span>{<span style="color:#a6e22e">onClick</span>}&gt;{<span style="color:#a6e22e">label</span>}&lt;/<span style="color:#f92672">button</span>&gt;;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">App</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">handleClick</span> <span style="color:#f92672">=</span> () =&gt; <span style="color:#a6e22e">alert</span>(<span style="color:#e6db74">&#34;Button clicked!&#34;</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> &lt;<span style="color:#f92672">Button</span> <span style="color:#a6e22e">label</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Click Me&#34;</span> <span style="color:#a6e22e">onClick</span><span style="color:#f92672">=</span>{<span style="color:#a6e22e">handleClick</span>} /&gt;;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><hr>
+<h1 id="references">References</h1>
+<ul>
+<li><a href="https://legacy.reactjs.org/docs/components-and-props.html">https://legacy.reactjs.org/docs/components-and-props.html</a></li>
+<li><a href="https://www.freecodecamp.org/news/how-to-use-props-in-reactjs/">https://www.freecodecamp.org/news/how-to-use-props-in-reactjs/</a></li>
+</ul>
+
+		</section>
+
+		<div class="post-tags">
+			
+			
+			
+		</div>
+		</article>
+</main>
+<footer>
+  <div style="display:flex"></div>
+  <div class="footer-info">
+    2024  <a
+      href="#">Kavindu Udara</a> | Send a mail <a href="mailto:karunasinghesampath38@gmail.com">Email Me</a>
+  </div>
+</footer>
+
+
+</div>
+    </body>
+</html>

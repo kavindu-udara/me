@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html><head lang="en">
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>React Reusable Components - Kavindu Udara</title><meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="
+Reusable components are building blocks of a React application designed to be reused in multiple places.
+They promote modularity, maintainability, and efficiency.
+
+
+Key Benefits
+
+Code Reusability: Write once, use multiple times.
+Consistency: Maintain consistent design and behavior across the app.
+Ease of Maintenance: Updates to a component reflect across all its instances.
+Efficiency: Reduces the need for duplicate code.
+
+
+Best Practices for Creating Reusable Components
+
+Single Responsibility Principle: Each component should have one clear purpose.
+Props: Use props to make components configurable and dynamic.
+Composition Over Inheritance: Combine smaller components to build larger ones.
+Avoid Hardcoding: Parameterize data through props instead of hardcoding values.
+Styling Flexibility: Use CSS modules, styled-components, or className props for flexible styling.
+Granularity: Balance between too granular (many small components) and too monolithic (large components).
+
+
+Examples of Reusable Components
+
+Button
+
+const Button = ({ onClick, children, style }) =&gt; (
+    &lt;button onClick={onClick} style={style}&gt;
+        {children}
+    &lt;/button&gt;
+);
+
+Input Field
+
+const Input = ({ type, value, onChange, placeholder }) =&gt; (
+    &lt;input
+        type={type}
+        value={value}
+        onChange={onChange}
+        placeholder={placeholder}
+    /&gt;
+);
+
+Card
+
+const Card = ({ children, style }) =&gt; (
+    &lt;div style={{ ...defaultStyle, ...style }}&gt;
+        {children}
+    &lt;/div&gt;
+);
+
+const defaultStyle = {
+    border: &#34;1px solid #ccc&#34;,
+    padding: &#34;10px&#34;,
+    borderRadius: &#34;5px&#34;,
+};
+
+Tips
+
+Test Components: Ensure each component works in isolation.
+Prop Validation: Use PropTypes or TypeScript for better validation and type safety.
+Document Components: Add comments or maintain documentation to explain usage.
+
+
+References
+
+https://www.freecodecamp.org/news/how-to-build-reusable-react-components/
+https://buttercms.com/blog/building-reusable-components-using-react/
+" />
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content="https://kavindu-udara.github.io/me/posts/react-reusable-components/">
+  <meta property="og:site_name" content="Kavindu Udara">
+  <meta property="og:title" content="React Reusable Components">
+  <meta property="og:description" content="Reusable components are building blocks of a React application designed to be reused in multiple places. They promote modularity, maintainability, and efficiency. Key Benefits Code Reusability: Write once, use multiple times. Consistency: Maintain consistent design and behavior across the app. Ease of Maintenance: Updates to a component reflect across all its instances. Efficiency: Reduces the need for duplicate code. Best Practices for Creating Reusable Components Single Responsibility Principle: Each component should have one clear purpose. Props: Use props to make components configurable and dynamic. Composition Over Inheritance: Combine smaller components to build larger ones. Avoid Hardcoding: Parameterize data through props instead of hardcoding values. Styling Flexibility: Use CSS modules, styled-components, or className props for flexible styling. Granularity: Balance between too granular (many small components) and too monolithic (large components). Examples of Reusable Components Button const Button = ({ onClick, children, style }) =&gt; ( &lt;button onClick={onClick} style={style}&gt; {children} &lt;/button&gt; ); Input Field const Input = ({ type, value, onChange, placeholder }) =&gt; ( &lt;input type={type} value={value} onChange={onChange} placeholder={placeholder} /&gt; ); Card const Card = ({ children, style }) =&gt; ( &lt;div style={{ ...defaultStyle, ...style }}&gt; {children} &lt;/div&gt; ); const defaultStyle = { border: &#34;1px solid #ccc&#34;, padding: &#34;10px&#34;, borderRadius: &#34;5px&#34;, }; Tips Test Components: Ensure each component works in isolation. Prop Validation: Use PropTypes or TypeScript for better validation and type safety. Document Components: Add comments or maintain documentation to explain usage. References https://www.freecodecamp.org/news/how-to-build-reusable-react-components/ https://buttercms.com/blog/building-reusable-components-using-react/">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2024-12-01T20:41:07+05:30">
+    <meta property="article:modified_time" content="2024-12-01T20:41:07+05:30">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="React Reusable Components">
+  <meta name="twitter:description" content="Reusable components are building blocks of a React application designed to be reused in multiple places. They promote modularity, maintainability, and efficiency. Key Benefits Code Reusability: Write once, use multiple times. Consistency: Maintain consistent design and behavior across the app. Ease of Maintenance: Updates to a component reflect across all its instances. Efficiency: Reduces the need for duplicate code. Best Practices for Creating Reusable Components Single Responsibility Principle: Each component should have one clear purpose. Props: Use props to make components configurable and dynamic. Composition Over Inheritance: Combine smaller components to build larger ones. Avoid Hardcoding: Parameterize data through props instead of hardcoding values. Styling Flexibility: Use CSS modules, styled-components, or className props for flexible styling. Granularity: Balance between too granular (many small components) and too monolithic (large components). Examples of Reusable Components Button const Button = ({ onClick, children, style }) =&gt; ( &lt;button onClick={onClick} style={style}&gt; {children} &lt;/button&gt; ); Input Field const Input = ({ type, value, onChange, placeholder }) =&gt; ( &lt;input type={type} value={value} onChange={onChange} placeholder={placeholder} /&gt; ); Card const Card = ({ children, style }) =&gt; ( &lt;div style={{ ...defaultStyle, ...style }}&gt; {children} &lt;/div&gt; ); const defaultStyle = { border: &#34;1px solid #ccc&#34;, padding: &#34;10px&#34;, borderRadius: &#34;5px&#34;, }; Tips Test Components: Ensure each component works in isolation. Prop Validation: Use PropTypes or TypeScript for better validation and type safety. Document Components: Add comments or maintain documentation to explain usage. References https://www.freecodecamp.org/news/how-to-build-reusable-react-components/ https://buttercms.com/blog/building-reusable-components-using-react/">
+<script src="https://kavindu-udara.github.io/me/js/feather.min.js"></script>
+	
+	
+        <link href="https://kavindu-udara.github.io/me/css/fonts.11a1877508139eac0b5b4852ceb110c35641b3533321e66e39149e901ed5756b.css" rel="stylesheet">
+	
+
+	
+	<link rel="stylesheet" type="text/css" media="screen" href="https://kavindu-udara.github.io/me/css/main.e8acf5f1d8afb7069a7e03e999aa16996a78ba6cf03f85597be93da0389727fd.css" />
+		<link id="darkModeStyle" rel="stylesheet" type="text/css" href="https://kavindu-udara.github.io/me/css/dark.1574c9217544c040ca2a05dd8ea37835a3f9df3b32177611e409f59bbf547fca.css"  disabled />
+	
+
+	
+	
+		<script type="text/javascript"
+		src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+		</script>
+
+		
+		<script type="text/x-mathjax-config">
+		MathJax.Hub.Config({
+			tex2jax: {
+				inlineMath: [['$','$'], ['\\(','\\)']],
+				displayMath: [['$$','$$'], ['\[','\]']],
+				processEscapes: true,
+				processEnvironments: true,
+				skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+				TeX: { equationNumbers: { autoNumber: "AMS" },
+						 extensions: ["AMSmath.js", "AMSsymbols.js"] }
+			}
+		});
+		</script>
+	
+
+	
+	
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css">
+		<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.js"></script>
+		<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body);"></script>
+
+		
+		<script>
+			document.addEventListener("DOMContentLoaded", function() {
+					renderMathInElement(document.body, {
+							delimiters: [
+									{left: "$$", right: "$$", display: true},
+									{left: "$", right: "$", display: false}
+							]
+					});
+			});
+			</script>
+	
+
+	
+</head>
+<body>
+        <div class="content"><header>
+	<div class="aboutmedev">
+		<div class="aboutmetextdev">
+			<div >Kavindu udara</div>
+			<div style="opacity: 40%;">Software Engineer</div>
+		</div>
+			<img class="aboutmeimage" src="https://avatars.githubusercontent.com/u/155027870?v=4" alt="github-profile-image" style="border-radius: 50%; width: 20%;">
+	</div>
+	<nav style="width: 100%; display: flex; justify-content: center; gap: 10px;">
+		
+		<a href="https://kavindu-udara.github.io/me/">home</a>
+		
+		<a href="https://kavindu-udara.github.io/me/posts">blog</a>
+		
+		<a href="https://github.com/kavindu-udara">github</a>
+		
+		<a href="https://x.com/udarakavindu99">twitter</a>
+		
+		<a href="https://www.linkedin.com/in/kavindu-udara-sampath-karunasinghe">linkedin</a>
+		
+		| <span id="dark-mode-toggle" onclick="toggleTheme()"></span>
+		<script src="https://kavindu-udara.github.io/me/js/themetoggle.js"></script>
+		
+	</nav>
+</header>
+
+<main>
+	<article>
+		<div class="title">
+			<h1 class="title">React Reusable Components</h1>
+			<div class="meta">Posted on Dec 1, 2024</div>
+		</div>
+		
+
+		
+
+		<section class="body">
+			<ul>
+<li>Reusable components are building blocks of a React application designed to be reused in multiple places.</li>
+<li>They promote modularity, maintainability, and efficiency.</li>
+</ul>
+<hr>
+<h3 id="key-benefits">Key Benefits</h3>
+<ul>
+<li><strong>Code Reusability</strong>: Write once, use multiple times.</li>
+<li><strong>Consistency</strong>: Maintain consistent design and behavior across the app.</li>
+<li><strong>Ease of Maintenance</strong>: Updates to a component reflect across all its instances.</li>
+<li><strong>Efficiency</strong>: Reduces the need for duplicate code.</li>
+</ul>
+<hr>
+<h3 id="best-practices-for-creating-reusable-components">Best Practices for Creating Reusable Components</h3>
+<ul>
+<li><strong>Single Responsibility Principle</strong>: Each component should have one clear purpose.</li>
+<li><strong>Props</strong>: Use props to make components configurable and dynamic.</li>
+<li><strong>Composition Over Inheritance</strong>: Combine smaller components to build larger ones.</li>
+<li><strong>Avoid Hardcoding</strong>: Parameterize data through props instead of hardcoding values.</li>
+<li><strong>Styling Flexibility</strong>: Use CSS modules, styled-components, or className props for flexible styling.</li>
+<li><strong>Granularity</strong>: Balance between too granular (many small components) and too monolithic (large components).</li>
+</ul>
+<hr>
+<h3 id="examples-of-reusable-components">Examples of Reusable Components</h3>
+<ol>
+<li>Button</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-jsx" data-lang="jsx"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">Button</span> <span style="color:#f92672">=</span> ({ <span style="color:#a6e22e">onClick</span>, <span style="color:#a6e22e">children</span>, <span style="color:#a6e22e">style</span> }) =&gt; (
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">button</span> <span style="color:#a6e22e">onClick</span><span style="color:#f92672">=</span>{<span style="color:#a6e22e">onClick</span>} <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span>{<span style="color:#a6e22e">style</span>}&gt;
+</span></span><span style="display:flex;"><span>        {<span style="color:#a6e22e">children</span>}
+</span></span><span style="display:flex;"><span>    &lt;/<span style="color:#f92672">button</span>&gt;
+</span></span><span style="display:flex;"><span>);
+</span></span></code></pre></div><ol start="2">
+<li>Input Field</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-jsx" data-lang="jsx"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">Input</span> <span style="color:#f92672">=</span> ({ <span style="color:#a6e22e">type</span>, <span style="color:#a6e22e">value</span>, <span style="color:#a6e22e">onChange</span>, <span style="color:#a6e22e">placeholder</span> }) =&gt; (
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">input</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span>{<span style="color:#a6e22e">type</span>}
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">value</span><span style="color:#f92672">=</span>{<span style="color:#a6e22e">value</span>}
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">onChange</span><span style="color:#f92672">=</span>{<span style="color:#a6e22e">onChange</span>}
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">placeholder</span><span style="color:#f92672">=</span>{<span style="color:#a6e22e">placeholder</span>}
+</span></span><span style="display:flex;"><span>    /&gt;
+</span></span><span style="display:flex;"><span>);
+</span></span></code></pre></div><ol start="3">
+<li>Card</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-jsx" data-lang="jsx"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">Card</span> <span style="color:#f92672">=</span> ({ <span style="color:#a6e22e">children</span>, <span style="color:#a6e22e">style</span> }) =&gt; (
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span>{{ ...<span style="color:#a6e22e">defaultStyle</span>, ...<span style="color:#a6e22e">style</span> }}&gt;
+</span></span><span style="display:flex;"><span>        {<span style="color:#a6e22e">children</span>}
+</span></span><span style="display:flex;"><span>    &lt;/<span style="color:#f92672">div</span>&gt;
+</span></span><span style="display:flex;"><span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">defaultStyle</span> <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">border</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;1px solid #ccc&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">padding</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;10px&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">borderRadius</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;5px&#34;</span>,
+</span></span><span style="display:flex;"><span>};
+</span></span></code></pre></div><hr>
+<h3 id="tips">Tips</h3>
+<ul>
+<li><strong>Test Components</strong>: Ensure each component works in isolation.</li>
+<li><strong>Prop Validation</strong>: Use <code>PropTypes</code> or TypeScript for better validation and type safety.</li>
+<li><strong>Document Components</strong>: Add comments or maintain documentation to explain usage.</li>
+</ul>
+<hr>
+<h1 id="references">References</h1>
+<ul>
+<li><a href="https://www.freecodecamp.org/news/how-to-build-reusable-react-components/">https://www.freecodecamp.org/news/how-to-build-reusable-react-components/</a></li>
+<li><a href="https://buttercms.com/blog/building-reusable-components-using-react/">https://buttercms.com/blog/building-reusable-components-using-react/</a></li>
+</ul>
+
+		</section>
+
+		<div class="post-tags">
+			
+			
+			
+		</div>
+		</article>
+</main>
+<footer>
+  <div style="display:flex"></div>
+  <div class="footer-info">
+    2024  <a
+      href="#">Kavindu Udara</a> | Send a mail <a href="mailto:karunasinghesampath38@gmail.com">Email Me</a>
+  </div>
+</footer>
+
+
+</div>
+    </body>
+</html>
