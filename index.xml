@@ -6,8 +6,43 @@
     <description>Recent content on Kavindu Udara</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 01 Dec 2024 21:33:30 +0530</lastBuildDate>
+    <lastBuildDate>Sun, 01 Dec 2024 21:44:35 +0530</lastBuildDate>
     <atom:link href="http://localhost:1313/me/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Deploying a React App</title>
+      <link>http://localhost:1313/me/posts/deploying-a-react-app/</link>
+      <pubDate>Sun, 01 Dec 2024 21:44:35 +0530</pubDate>
+      <guid>http://localhost:1313/me/posts/deploying-a-react-app/</guid>
+      <description>&lt;p&gt;Deploying a React app involves several steps to prepare the app for production, including optimizing the build, configuring deployment settings, and choosing a hosting platform. This note focuses on the preparation of a React app for production using the &lt;code&gt;npm run build&lt;/code&gt; command, which creates an optimized version of your app for deployment.&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h3 id=&#34;1-preparing-the-app-for-production-using-npm-run-build&#34;&gt;1. Preparing the App for Production Using &lt;code&gt;npm run build&lt;/code&gt;&lt;/h3&gt;&#xA;&lt;p&gt;When you’re ready to deploy your React app, the first step is to create a &lt;strong&gt;production build&lt;/strong&gt;. React provides a command &lt;code&gt;npm run build&lt;/code&gt; that bundles your app into static files optimized for performance. This build includes minified JavaScript, optimized assets, and a structure that can be served by a static server.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Styling in React</title>
+      <link>http://localhost:1313/me/posts/styling-in-react/</link>
+      <pubDate>Sun, 01 Dec 2024 21:42:01 +0530</pubDate>
+      <guid>http://localhost:1313/me/posts/styling-in-react/</guid>
+      <description>&lt;p&gt;In React, styling can be done in multiple ways depending on your preferences and the requirements of the project. You can use inline styles, external CSS, CSS Modules, or even CSS-in-JS solutions like &lt;strong&gt;Styled Components&lt;/strong&gt; and utility-first frameworks like &lt;strong&gt;Tailwind CSS&lt;/strong&gt;. This note will explore these approaches and when to use each.&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h3 id=&#34;1-inline-styles-vs-external-css-vs-css-modules&#34;&gt;1. Inline Styles vs External CSS vs CSS Modules&lt;/h3&gt;&#xA;&lt;h4 id=&#34;11-inline-styles&#34;&gt;1.1 Inline Styles&lt;/h4&gt;&#xA;&lt;p&gt;Inline styles are applied directly within a component using a JavaScript object. Each style property is written in camelCase instead of hyphenated format.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>React Lifecycle and Hooks</title>
+      <link>http://localhost:1313/me/posts/react-lifecycle-and-hooks/</link>
+      <pubDate>Sun, 01 Dec 2024 21:40:04 +0530</pubDate>
+      <guid>http://localhost:1313/me/posts/react-lifecycle-and-hooks/</guid>
+      <description>&lt;p&gt;React hooks allow functional components to manage side effects, state, and other lifecycle events. The introduction of hooks has simplified component lifecycle management and enabled functional components to become more powerful and feature-rich.&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h3 id=&#34;1-introduction-to-react-hooks&#34;&gt;1. Introduction to React Hooks&lt;/h3&gt;&#xA;&lt;p&gt;React hooks are functions that allow you to &amp;ldquo;hook into&amp;rdquo; React features from functional components. They provide a more declarative approach to handling component logic compared to class components. The most commonly used hooks are:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Lists and Keys in React</title>
+      <link>http://localhost:1313/me/posts/lists-and-keys-in-react/</link>
+      <pubDate>Sun, 01 Dec 2024 21:37:30 +0530</pubDate>
+      <guid>http://localhost:1313/me/posts/lists-and-keys-in-react/</guid>
+      <description>&lt;p&gt;Rendering lists in React is common for displaying multiple items dynamically. React provides a built-in way to efficiently render lists using JavaScript array methods like &lt;code&gt;.map()&lt;/code&gt;. Additionally, using &lt;strong&gt;keys&lt;/strong&gt; is important for optimizing rendering and maintaining state in lists.&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h4 id=&#34;1-rendering-lists-with-map&#34;&gt;1. Rendering Lists with &lt;code&gt;.map()&lt;/code&gt;&lt;/h4&gt;&#xA;&lt;p&gt;In React, the &lt;code&gt;.map()&lt;/code&gt; function is commonly used to iterate over an array of data and return an array of elements that can be rendered. This is especially useful for rendering dynamic data like lists of items.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Conditional Rendering in React</title>
+      <link>http://localhost:1313/me/posts/conditional-rendering-in-react/</link>
+      <pubDate>Sun, 01 Dec 2024 21:35:23 +0530</pubDate>
+      <guid>http://localhost:1313/me/posts/conditional-rendering-in-react/</guid>
+      <description>&lt;p&gt;Conditional rendering allows components to decide what to display based on certain conditions. React provides several ways to implement conditional rendering, making it easy to display different UI elements based on the state or props of a component.&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h3 id=&#34;1-using-if-else-statements&#34;&gt;1. Using &lt;code&gt;if-else&lt;/code&gt; Statements&lt;/h3&gt;&#xA;&lt;p&gt;You can use standard JavaScript &lt;code&gt;if-else&lt;/code&gt; statements for conditional rendering within a component. Typically, you would do this outside of the JSX return statement, such as within the render function or directly before the return.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Event Handling in React</title>
       <link>http://localhost:1313/me/posts/event-handling-in-react/</link>
@@ -76,7 +111,7 @@
       <link>http://localhost:1313/me/posts/react-fundamentals/</link>
       <pubDate>Sun, 01 Dec 2024 20:36:06 +0530</pubDate>
       <guid>http://localhost:1313/me/posts/react-fundamentals/</guid>
-      <description>&lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;Introduction&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;What is React and Why use React ?&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;../React-Reusable-Components&#34;&gt;React Reusable Components&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;../React-Virtual-DOM&#34;&gt;React Virtual DOM&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;Large Community Support&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;../Real-world-Examples-of-apps-build-with-React&#34;&gt;Real-world Examples of apps build with React&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;a href=&#34;../Setting-Up-the-Development-Environment-for-React-with-Vite&#34;&gt;&lt;strong&gt;Setting Up the Development Environment for React with Vite&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Installing Node.js and npm.&lt;/li&gt;&#xA;&lt;li&gt;Setting up a React Project.&lt;/li&gt;&#xA;&lt;li&gt;Overview of the project folder structure.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;Understanding JSX / TSX&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;../What-is-JSX-TSX-and-How-It-Differs-from-HTML&#34;&gt;What is JSX, TSX and How It Differs from HTML&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;JSX/TSX attributes and how to use them.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;a href=&#34;../Components-in-React&#34;&gt;&lt;strong&gt;Components in React&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;</description>
+      <description>&lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;Introduction&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;What is React and Why use React ?&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;../react-reusable-components&#34;&gt;React Reusable Components&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;../react-virtual-dom&#34;&gt;React Virtual DOM&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;Large Community Support&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;../real-world-examples-of-apps-build-with-react&#34;&gt;Real-world Examples of apps build with React&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;a href=&#34;../setting-up-the-development-environment-for-react-with-vite&#34;&gt;&lt;strong&gt;Setting Up the Development Environment for React with Vite&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Installing Node.js and npm.&lt;/li&gt;&#xA;&lt;li&gt;Setting up a React Project.&lt;/li&gt;&#xA;&lt;li&gt;Overview of the project folder structure.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;Understanding JSX / TSX&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;../what-is-jsx-tsx-and-how-ut-differs-from-html&#34;&gt;What is JSX, TSX and How It Differs from HTML&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;JSX/TSX attributes and how to use them.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;a href=&#34;../components-in-react&#34;&gt;&lt;strong&gt;Components in React&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Hi! I’m Kavindu, and I like to make memes and dreams and software.</title>
