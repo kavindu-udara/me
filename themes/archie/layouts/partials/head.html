@@ -1,0 +1,18 @@
+<header>
+	<div class="aboutmedev">
+		<div class="aboutmetextdev">
+			<div >Kavindu udara</div>
+			<div style="opacity: 40%;">Software Engineer</div>
+		</div>
+			<img class="aboutmeimage" src="https://avatars.githubusercontent.com/u/155027870?v=4" alt="github-profile-image" style="border-radius: 50%; width: 20%;">
+	</div>
+	<nav style="width: 100%; display: flex; justify-content: center; gap: 10px;">
+		{{ range .Site.Menus.main }}
+		<a href="{{ .URL }}">{{ .Name }}</a>
+		{{ end }}
+		{{ if eq .Site.Params.mode "toggle" -}}
+        | <span id="dark-mode-toggle" onclick="toggleTheme()"></span>
+		<script src="{{ absURL "js/themetoggle.js" }}"></script>
+		{{ end }}
+	</nav>
+</header>

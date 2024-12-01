@@ -1,0 +1,47 @@
+{{ define "main" }} {{ if isset .Data "Term" }}
+<h1>Entries tagged - "{{ .Data.Term }}"</h1>
+{{ else }}
+<h1 class="page-title">All articles</h1>
+{{ end }}
+<main class="list">
+  <div class="site-description">
+    {{- if isset .Site.Params "subtitle" -}}
+    <p>{{ .Site.Params.Subtitle | .Page.RenderString }}</p>
+    {{- end -}}
+  </div>
+  {{ $pages := where .Site.RegularPages "Type" "in" .Site.Params.mainSections }}
+  {{ $paginator := .Paginate (where $pages "Params.hidden" "ne" true) }} {{
+  range $paginator.Pages }}
+  <section class="list-item">
+    <h1 class="title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h1>
+    <time
+      >{{ dateFormat ":date_medium" .Date }}{{ if .Draft }}
+      <span class="draft-label">DRAFT</span> {{ end }}</time
+    >
+    <div
+      style="
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: normal;
+        margin-bottom: 20px;
+      "
+    >
+      {{ if isset .Params "description" }} {{ .Description }} {{ else }} {{
+      .Summary }}&hellip; {{ end }}
+    </div>
+    {{ if isset .Params "tags" }}
+    <ul>
+      {{ range .Params.tags }}
+      <li>{{ . }}</li>
+      {{ end }}
+    </ul>
+    {{ end }}
+    <a class="readmore" href="{{ .RelPermalink }}">Read more ⟶</a>
+    <hr />
+  </section>
+  {{ end }} {{ template "partials/paginator.html" . }}
+</main>
+{{ end }}
