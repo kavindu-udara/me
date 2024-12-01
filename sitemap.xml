@@ -2,27 +2,33 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://kavindu-udara.github.io/me/</loc>
+    <loc>http://localhost:1313/me/</loc>
+    <lastmod>2024-12-01T20:54:27+05:30</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/me/posts/</loc>
+    <lastmod>2024-12-01T20:54:27+05:30</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/me/posts/react-reusable-components/</loc>
+    <lastmod>2024-12-01T20:41:07+05:30</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/me/posts/react-fundamentals/</loc>
+    <lastmod>2024-12-01T20:36:06+05:30</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/me/posts/my-blog/</loc>
     <lastmod>2024-12-01T19:54:46+05:30</lastmod>
   </url><url>
-    <loc>https://kavindu-udara.github.io/me/posts/my-blog/</loc>
-    <lastmod>2024-12-01T19:54:46+05:30</lastmod>
-  </url><url>
-    <loc>https://kavindu-udara.github.io/me/posts/</loc>
-    <lastmod>2024-12-01T19:54:46+05:30</lastmod>
-  </url><url>
-    <loc>https://kavindu-udara.github.io/me/posts/new_post/</loc>
+    <loc>http://localhost:1313/me/posts/new_post/</loc>
     <lastmod>2024-12-01T19:32:49+05:30</lastmod>
   </url><url>
-    <loc>https://kavindu-udara.github.io/me/posts/my-first-page/</loc>
+    <loc>http://localhost:1313/me/posts/my-first-page/</loc>
     <lastmod>2024-12-01T17:44:11+05:30</lastmod>
   </url><url>
-    <loc>https://kavindu-udara.github.io/me/aboutme/</loc>
+    <loc>http://localhost:1313/me/aboutme/</loc>
   </url><url>
-    <loc>https://kavindu-udara.github.io/me/categories/</loc>
+    <loc>http://localhost:1313/me/categories/</loc>
   </url><url>
-    <loc>https://kavindu-udara.github.io/me/aboutme/aboutme/</loc>
+    <loc>http://localhost:1313/me/aboutme/aboutme/</loc>
   </url><url>
-    <loc>https://kavindu-udara.github.io/me/tags/</loc>
+    <loc>http://localhost:1313/me/tags/</loc>
   </url>
 </urlset>

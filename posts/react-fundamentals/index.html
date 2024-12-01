@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html><head lang="en"><script src="/me/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=me/livereload" data-no-instant defer></script>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>React Fundamentals - Kavindu Udara</title><meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="
+
+Introduction
+
+What is React and Why use React ?
+
+React Reusable Components
+React Virtual DOM
+Large Community Support
+
+
+Real-world Examples of apps build with React
+
+
+
+Setting Up the Development Environment for React with Vite
+
+Installing Node.js and npm.
+Setting up a React Project.
+Overview of the project folder structure.
+
+
+
+Understanding JSX / TSX
+
+What is JSX, TSX and How It Differs from HTML
+JSX/TSX attributes and how to use them.
+
+
+
+Components in React" />
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content="http://localhost:1313/me/posts/react-fundamentals/">
+  <meta property="og:site_name" content="Kavindu Udara">
+  <meta property="og:title" content="React Fundamentals">
+  <meta property="og:description" content="Introduction
+What is React and Why use React ? React Reusable Components React Virtual DOM Large Community Support Real-world Examples of apps build with React Setting Up the Development Environment for React with Vite
+Installing Node.js and npm. Setting up a React Project. Overview of the project folder structure. Understanding JSX / TSX
+What is JSX, TSX and How It Differs from HTML JSX/TSX attributes and how to use them. Components in React">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2024-12-01T20:36:06+05:30">
+    <meta property="article:modified_time" content="2024-12-01T20:36:06+05:30">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="React Fundamentals">
+  <meta name="twitter:description" content="Introduction
+What is React and Why use React ? React Reusable Components React Virtual DOM Large Community Support Real-world Examples of apps build with React Setting Up the Development Environment for React with Vite
+Installing Node.js and npm. Setting up a React Project. Overview of the project folder structure. Understanding JSX / TSX
+What is JSX, TSX and How It Differs from HTML JSX/TSX attributes and how to use them. Components in React">
+<script src="http://localhost:1313/me/js/feather.min.js"></script>
+	
+	
+        <link href="http://localhost:1313/me/css/fonts.11a1877508139eac0b5b4852ceb110c35641b3533321e66e39149e901ed5756b.css" rel="stylesheet">
+	
+
+	
+	<link rel="stylesheet" type="text/css" media="screen" href="http://localhost:1313/me/css/main.e8acf5f1d8afb7069a7e03e999aa16996a78ba6cf03f85597be93da0389727fd.css" />
+		<link id="darkModeStyle" rel="stylesheet" type="text/css" href="http://localhost:1313/me/css/dark.1574c9217544c040ca2a05dd8ea37835a3f9df3b32177611e409f59bbf547fca.css"  disabled />
+	
+
+	
+	
+		<script type="text/javascript"
+		src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+		</script>
+
+		
+		<script type="text/x-mathjax-config">
+		MathJax.Hub.Config({
+			tex2jax: {
+				inlineMath: [['$','$'], ['\\(','\\)']],
+				displayMath: [['$$','$$'], ['\[','\]']],
+				processEscapes: true,
+				processEnvironments: true,
+				skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+				TeX: { equationNumbers: { autoNumber: "AMS" },
+						 extensions: ["AMSmath.js", "AMSsymbols.js"] }
+			}
+		});
+		</script>
+	
+
+	
+	
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css">
+		<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.js"></script>
+		<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body);"></script>
+
+		
+		<script>
+			document.addEventListener("DOMContentLoaded", function() {
+					renderMathInElement(document.body, {
+							delimiters: [
+									{left: "$$", right: "$$", display: true},
+									{left: "$", right: "$", display: false}
+							]
+					});
+			});
+			</script>
+	
+
+	
+</head>
+<body>
+        <div class="content"><header>
+	<div class="aboutmedev">
+		<div class="aboutmetextdev">
+			<div >Kavindu udara</div>
+			<div style="opacity: 40%;">Software Engineer</div>
+		</div>
+			<img class="aboutmeimage" src="https://avatars.githubusercontent.com/u/155027870?v=4" alt="github-profile-image" style="border-radius: 50%; width: 20%;">
+	</div>
+	<nav style="width: 100%; display: flex; justify-content: center; gap: 10px;">
+		
+		<a href="/me/">home</a>
+		
+		<a href="/me/posts">blog</a>
+		
+		<a href="https://github.com/kavindu-udara">github</a>
+		
+		<a href="https://x.com/udarakavindu99">twitter</a>
+		
+		<a href="https://www.linkedin.com/in/kavindu-udara-sampath-karunasinghe">linkedin</a>
+		
+		| <span id="dark-mode-toggle" onclick="toggleTheme()"></span>
+		<script src="http://localhost:1313/me/js/themetoggle.js"></script>
+		
+	</nav>
+</header>
+
+<main>
+	<article>
+		<div class="title">
+			<h1 class="title">React Fundamentals</h1>
+			<div class="meta">Posted on Dec 1, 2024</div>
+		</div>
+		
+
+		
+
+		<section class="body">
+			<ol>
+<li>
+<p><strong>Introduction</strong></p>
+<ul>
+<li>What is React and Why use React ?
+<ul>
+<li><a href="../React-Reusable-Components">React Reusable Components</a></li>
+<li><a href="../React-Virtual-DOM">React Virtual DOM</a></li>
+<li>Large Community Support</li>
+</ul>
+</li>
+<li><a href="../Real-world-Examples-of-apps-build-with-React">Real-world Examples of apps build with React</a></li>
+</ul>
+</li>
+<li>
+<p><a href="../Setting-Up-the-Development-Environment-for-React-with-Vite"><strong>Setting Up the Development Environment for React with Vite</strong></a></p>
+<ul>
+<li>Installing Node.js and npm.</li>
+<li>Setting up a React Project.</li>
+<li>Overview of the project folder structure.</li>
+</ul>
+</li>
+<li>
+<p><strong>Understanding JSX / TSX</strong></p>
+<ul>
+<li><a href="../What-is-JSX-TSX-and-How-It-Differs-from-HTML">What is JSX, TSX and How It Differs from HTML</a></li>
+<li>JSX/TSX attributes and how to use them.</li>
+</ul>
+</li>
+<li>
+<p><a href="../Components-in-React"><strong>Components in React</strong></a></p>
+<ul>
+<li>Functional Components vs Class Components.</li>
+<li>How to create and export components.</li>
+<li>Importing components and using them inside other components.</li>
+</ul>
+</li>
+<li>
+<p><strong>Props and State</strong> <a href="../Props-in-React">Props in React</a>, <a href="../State-in-React">State in React</a></p>
+<ul>
+<li>Introduction to props and how to pass data between components.</li>
+<li>Introduction to state and <code>useState</code> hook.</li>
+<li>Updating and managing state.</li>
+</ul>
+</li>
+<li>
+<p><a href="../Event-Handling-in-React"><strong>Event Handling in React</strong> </a></p>
+<ul>
+<li>How to handle events like clicks, inputs, and form submissions.</li>
+<li>Event binding and passing data with event handlers.</li>
+</ul>
+</li>
+<li>
+<p><a href="../Conditional-Rendering-in-React"><strong>Conditional Rendering in React</strong></a></p>
+<ul>
+<li>How to conditionally render components using <code>if-else</code>, <code>ternary operators</code>, and <code>&amp;&amp;</code> logic.</li>
+</ul>
+</li>
+<li>
+<p><a href="../Lists-and-Keys-in-React"><strong>Lists and Keys in React</strong></a></p>
+<ul>
+<li>How to render lists in React using <code>.map()</code>.</li>
+<li>Importance of keys in list rendering.</li>
+</ul>
+</li>
+<li>
+<p><a href="../React-Lifecycle-and-Hooks"><strong>React Lifecycle and Hooks</strong></a></p>
+<ul>
+<li>Introduction to React hooks: <code>useEffect</code> for handling side effects.</li>
+</ul>
+</li>
+<li>
+<p><a href="../Styling-in-React"><strong>Styling in React</strong></a></p>
+<ul>
+<li>Inline styles vs External CSS vs CSS Modules.</li>
+<li>Introduction to styling libraries like Styled Components or Tailwind CSS.</li>
+</ul>
+</li>
+<li>
+<p><a href="../Deploying-a-React-App"><strong>Deploying a React App</strong></a></p>
+<ul>
+<li>Preparing the app for production using <code>npm run build</code>.</li>
+</ul>
+</li>
+</ol>
+
+		</section>
+
+		<div class="post-tags">
+			
+			
+			
+		</div>
+		</article>
+</main>
+<footer>
+  <div style="display:flex"></div>
+  <div class="footer-info">
+    2024  <a
+      href="#">Kavindu Udara</a> | Send a mail <a href="mailto:karunasinghesampath38@gmail.com">Email Me</a>
+  </div>
+</footer>
+</div>
+    </body>
+</html>

@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html><head lang="en"><script src="/me/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=me/livereload" data-no-instant defer></script>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Components in React - Kavindu Udara</title><meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="React components are the building blocks of React applications. They allow developers to break the UI into reusable, independent pieces.
+
+Functional Components vs Class Components
+
+  
+      
+          Aspect
+          Functional Components
+          Class Components
+      
+  
+  
+      
+          Definition
+          Plain JavaScript functions that return JSX.
+          ES6 classes that extend React.Component.
+      
+      
+          State
+          Uses the useState and useEffect hooks (introduced in React 16.8).
+          Uses this.state for managing state.
+      
+      
+          Lifecycle Methods
+          Replaced by hooks like useEffect.
+          Explicit lifecycle methods like componentDidMount.
+      
+      
+          Syntax
+          Simpler and more concise.
+          More verbose due to class structure.
+      
+      
+          Performance
+          Generally lighter and faster.
+          Slightly heavier because of class overhead.
+      
+      
+          Example
+          
+          
+      
+      
+          Functional Component:
+          Class Component:
+          
+      
+      
+          ```jsx
+          ```jsx
+          
+      
+      
+          function Greet() {
+          class Greet extends React.Component {
+          
+      
+      
+          return &lt;h1&gt;Hello&lt;/h1&gt;;
+          render() {
+          
+      
+      
+          }
+          return &lt;h1&gt;Hello&lt;/h1&gt;;
+          
+      
+      
+          ```
+          }
+          
+      
+  
+
+
+When to Use?
+
+Use functional components whenever possible; they are the modern and preferred approach. Class components are now rarely used in new projects.
+
+
+How to Create and Export Components
+
+
+Creating a Functional Component" />
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content="http://localhost:1313/me/posts/components-in-react/">
+  <meta property="og:site_name" content="Kavindu Udara">
+  <meta property="og:title" content="Components in React">
+  <meta property="og:description" content="React components are the building blocks of React applications. They allow developers to break the UI into reusable, independent pieces.
+Functional Components vs Class Components Aspect Functional Components Class Components Definition Plain JavaScript functions that return JSX. ES6 classes that extend React.Component. State Uses the useState and useEffect hooks (introduced in React 16.8). Uses this.state for managing state. Lifecycle Methods Replaced by hooks like useEffect. Explicit lifecycle methods like componentDidMount. Syntax Simpler and more concise. More verbose due to class structure. Performance Generally lighter and faster. Slightly heavier because of class overhead. Example Functional Component: Class Component: ```jsx ```jsx function Greet() { class Greet extends React.Component { return &lt;h1&gt;Hello&lt;/h1&gt;; render() { } return &lt;h1&gt;Hello&lt;/h1&gt;; ``` } When to Use? Use functional components whenever possible; they are the modern and preferred approach. Class components are now rarely used in new projects. How to Create and Export Components Creating a Functional Component">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2024-12-01T21:25:51+05:30">
+    <meta property="article:modified_time" content="2024-12-01T21:25:51+05:30">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Components in React">
+  <meta name="twitter:description" content="React components are the building blocks of React applications. They allow developers to break the UI into reusable, independent pieces.
+Functional Components vs Class Components Aspect Functional Components Class Components Definition Plain JavaScript functions that return JSX. ES6 classes that extend React.Component. State Uses the useState and useEffect hooks (introduced in React 16.8). Uses this.state for managing state. Lifecycle Methods Replaced by hooks like useEffect. Explicit lifecycle methods like componentDidMount. Syntax Simpler and more concise. More verbose due to class structure. Performance Generally lighter and faster. Slightly heavier because of class overhead. Example Functional Component: Class Component: ```jsx ```jsx function Greet() { class Greet extends React.Component { return &lt;h1&gt;Hello&lt;/h1&gt;; render() { } return &lt;h1&gt;Hello&lt;/h1&gt;; ``` } When to Use? Use functional components whenever possible; they are the modern and preferred approach. Class components are now rarely used in new projects. How to Create and Export Components Creating a Functional Component">
+<script src="http://localhost:1313/me/js/feather.min.js"></script>
+	
+	
+        <link href="http://localhost:1313/me/css/fonts.11a1877508139eac0b5b4852ceb110c35641b3533321e66e39149e901ed5756b.css" rel="stylesheet">
+	
+
+	
+	<link rel="stylesheet" type="text/css" media="screen" href="http://localhost:1313/me/css/main.e8acf5f1d8afb7069a7e03e999aa16996a78ba6cf03f85597be93da0389727fd.css" />
+		<link id="darkModeStyle" rel="stylesheet" type="text/css" href="http://localhost:1313/me/css/dark.1574c9217544c040ca2a05dd8ea37835a3f9df3b32177611e409f59bbf547fca.css"  disabled />
+	
+
+	
+	
+		<script type="text/javascript"
+		src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+		</script>
+
+		
+		<script type="text/x-mathjax-config">
+		MathJax.Hub.Config({
+			tex2jax: {
+				inlineMath: [['$','$'], ['\\(','\\)']],
+				displayMath: [['$$','$$'], ['\[','\]']],
+				processEscapes: true,
+				processEnvironments: true,
+				skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+				TeX: { equationNumbers: { autoNumber: "AMS" },
+						 extensions: ["AMSmath.js", "AMSsymbols.js"] }
+			}
+		});
+		</script>
+	
+
+	
+	
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css">
+		<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.js"></script>
+		<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body);"></script>
+
+		
+		<script>
+			document.addEventListener("DOMContentLoaded", function() {
+					renderMathInElement(document.body, {
+							delimiters: [
+									{left: "$$", right: "$$", display: true},
+									{left: "$", right: "$", display: false}
+							]
+					});
+			});
+			</script>
+	
+
+	
+</head>
+<body>
+        <div class="content"><header>
+	<div class="aboutmedev">
+		<div class="aboutmetextdev">
+			<div >Kavindu udara</div>
+			<div style="opacity: 40%;">Software Engineer</div>
+		</div>
+			<img class="aboutmeimage" src="https://avatars.githubusercontent.com/u/155027870?v=4" alt="github-profile-image" style="border-radius: 50%; width: 20%;">
+	</div>
+	<nav style="width: 100%; display: flex; justify-content: center; gap: 10px;">
+		
+		<a href="/me/">home</a>
+		
+		<a href="/me/posts">blog</a>
+		
+		<a href="https://github.com/kavindu-udara">github</a>
+		
+		<a href="https://x.com/udarakavindu99">twitter</a>
+		
+		<a href="https://www.linkedin.com/in/kavindu-udara-sampath-karunasinghe">linkedin</a>
+		
+		| <span id="dark-mode-toggle" onclick="toggleTheme()"></span>
+		<script src="http://localhost:1313/me/js/themetoggle.js"></script>
+		
+	</nav>
+</header>
+
+<main>
+	<article>
+		<div class="title">
+			<h1 class="title">Components in React</h1>
+			<div class="meta">Posted on Dec 1, 2024</div>
+		</div>
+		
+
+		
+
+		<section class="body">
+			<p>React components are the building blocks of React applications. They allow developers to break the UI into reusable, independent pieces.</p>
+<hr>
+<h3 id="functional-components-vs-class-components">Functional Components vs Class Components</h3>
+<table>
+  <thead>
+      <tr>
+          <th><strong>Aspect</strong></th>
+          <th><strong>Functional Components</strong></th>
+          <th><strong>Class Components</strong></th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>Definition</strong></td>
+          <td>Plain JavaScript functions that return JSX.</td>
+          <td>ES6 classes that extend <code>React.Component</code>.</td>
+      </tr>
+      <tr>
+          <td><strong>State</strong></td>
+          <td>Uses the <code>useState</code> and <code>useEffect</code> hooks (introduced in React 16.8).</td>
+          <td>Uses <code>this.state</code> for managing state.</td>
+      </tr>
+      <tr>
+          <td><strong>Lifecycle Methods</strong></td>
+          <td>Replaced by hooks like <code>useEffect</code>.</td>
+          <td>Explicit lifecycle methods like <code>componentDidMount</code>.</td>
+      </tr>
+      <tr>
+          <td><strong>Syntax</strong></td>
+          <td>Simpler and more concise.</td>
+          <td>More verbose due to class structure.</td>
+      </tr>
+      <tr>
+          <td><strong>Performance</strong></td>
+          <td>Generally lighter and faster.</td>
+          <td>Slightly heavier because of class overhead.</td>
+      </tr>
+      <tr>
+          <td><strong>Example</strong></td>
+          <td></td>
+          <td></td>
+      </tr>
+      <tr>
+          <td>Functional Component:</td>
+          <td>Class Component:</td>
+          <td></td>
+      </tr>
+      <tr>
+          <td>```jsx</td>
+          <td>```jsx</td>
+          <td></td>
+      </tr>
+      <tr>
+          <td>function Greet() {</td>
+          <td>class Greet extends React.Component {</td>
+          <td></td>
+      </tr>
+      <tr>
+          <td>return <code>&lt;h1&gt;Hello&lt;/h1&gt;</code>;</td>
+          <td>render() {</td>
+          <td></td>
+      </tr>
+      <tr>
+          <td>}</td>
+          <td>return <code>&lt;h1&gt;Hello&lt;/h1&gt;</code>;</td>
+          <td></td>
+      </tr>
+      <tr>
+          <td>```</td>
+          <td>}</td>
+          <td></td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h3 id="when-to-use">When to Use?</h3>
+<ul>
+<li>Use functional components whenever possible; they are the modern and preferred approach. Class components are now rarely used in new projects.</li>
+</ul>
+<hr>
+<h3 id="how-to-create-and-export-components">How to Create and Export Components</h3>
+<ol>
+<li>
+<p>Creating a Functional Component</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-jsx" data-lang="jsx"><span style="display:flex;"><span><span style="color:#75715e">// Greet.jsx
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">Greet</span>() {
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">return</span> &lt;<span style="color:#f92672">h1</span>&gt;<span style="color:#a6e22e">Hello</span>, <span style="color:#a6e22e">World</span><span style="color:#f92672">!</span>&lt;/<span style="color:#f92672">h1</span>&gt;;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> <span style="color:#a6e22e">Greet</span>;
+</span></span></code></pre></div></li>
+<li>
+<p>Creating a Class Component</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-jsx" data-lang="jsx"><span style="display:flex;"><span><span style="color:#75715e">// Welcome.jsx
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">import</span> <span style="color:#a6e22e">React</span>, { <span style="color:#a6e22e">Component</span> } <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;react&#39;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Welcome</span> <span style="color:#66d9ef">extends</span> <span style="color:#a6e22e">Component</span> {
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">render</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> &lt;<span style="color:#f92672">h1</span>&gt;<span style="color:#a6e22e">Welcome</span> <span style="color:#a6e22e">to</span> <span style="color:#a6e22e">React</span><span style="color:#f92672">!</span>&lt;/<span style="color:#f92672">h1</span>&gt;;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> <span style="color:#a6e22e">Welcome</span>;
+</span></span></code></pre></div></li>
+<li>
+<p>Named Exports
+You can export multiple components from a file:</p>
+</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-jsx" data-lang="jsx"><span style="display:flex;"><span><span style="color:#75715e">// Greetings.jsx
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">export</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">Hello</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> &lt;<span style="color:#f92672">h1</span>&gt;<span style="color:#a6e22e">Hello</span><span style="color:#f92672">!</span>&lt;/<span style="color:#f92672">h1</span>&gt;;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">export</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">Goodbye</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> &lt;<span style="color:#f92672">h1</span>&gt;<span style="color:#a6e22e">Goodbye</span><span style="color:#f92672">!</span>&lt;/<span style="color:#f92672">h1</span>&gt;;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><hr>
+<h3 id="importing-components-and-using-them-inside-other-components">Importing Components and Using Them Inside Other Components</h3>
+<ol>
+<li>Default Export
+Import and use a default exported component</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-jsx" data-lang="jsx"><span style="display:flex;"><span><span style="color:#66d9ef">import</span> <span style="color:#a6e22e">Greet</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;./Greet&#39;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">App</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> (
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">div</span>&gt;
+</span></span><span style="display:flex;"><span>            &lt;<span style="color:#f92672">Greet</span> /&gt;
+</span></span><span style="display:flex;"><span>        &lt;/<span style="color:#f92672">div</span>&gt;
+</span></span><span style="display:flex;"><span>    );
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> <span style="color:#a6e22e">App</span>;
+</span></span></code></pre></div><ol start="2">
+<li>Named Exports
+Import and use named exported components</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-jsx" data-lang="jsx"><span style="display:flex;"><span><span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">Hello</span>, <span style="color:#a6e22e">Goodbye</span> } <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;./Greetings&#39;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">App</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> (
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">div</span>&gt;
+</span></span><span style="display:flex;"><span>            &lt;<span style="color:#f92672">Hello</span> /&gt;
+</span></span><span style="display:flex;"><span>            &lt;<span style="color:#f92672">Goodbye</span> /&gt;
+</span></span><span style="display:flex;"><span>        &lt;/<span style="color:#f92672">div</span>&gt;
+</span></span><span style="display:flex;"><span>    );
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> <span style="color:#a6e22e">App</span>;
+</span></span></code></pre></div><ol start="3">
+<li>Aliasing Components
+Rename components during import</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-jsx" data-lang="jsx"><span style="display:flex;"><span><span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">Hello</span> <span style="color:#a6e22e">as</span> <span style="color:#a6e22e">Hi</span> } <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;./Greetings&#39;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">App</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> &lt;<span style="color:#f92672">Hi</span> /&gt;;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> <span style="color:#a6e22e">App</span>;
+</span></span></code></pre></div><ol start="4">
+<li>Composing Components
+Use components inside other components to build a hierarchy</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-jsx" data-lang="jsx"><span style="display:flex;"><span><span style="color:#66d9ef">import</span> <span style="color:#a6e22e">Greet</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;./Greet&#39;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">Header</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> (
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">header</span>&gt;
+</span></span><span style="display:flex;"><span>            &lt;<span style="color:#f92672">Greet</span> /&gt;
+</span></span><span style="display:flex;"><span>            &lt;<span style="color:#f92672">h2</span>&gt;<span style="color:#a6e22e">This</span> <span style="color:#a6e22e">is</span> <span style="color:#a6e22e">a</span> <span style="color:#a6e22e">header</span>&lt;/<span style="color:#f92672">h2</span>&gt;
+</span></span><span style="display:flex;"><span>        &lt;/<span style="color:#f92672">header</span>&gt;
+</span></span><span style="display:flex;"><span>    );
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> <span style="color:#a6e22e">Header</span>;
+</span></span></code></pre></div><hr>
+<h3 id="summary">Summary</h3>
+<ul>
+<li><strong>Functional Components</strong> are the modern standard due to hooks and simplicity.</li>
+<li>Components can be exported as default or named exports.</li>
+<li>You can compose a rich UI by importing and using components inside other components.<br>
+This modular structure makes React scalable and maintainable.</li>
+</ul>
+<hr>
+<h1 id="references">References</h1>
+<ul>
+<li><a href="https://www.freecodecamp.org/news/function-component-vs-class-component-in-react/">https://www.freecodecamp.org/news/function-component-vs-class-component-in-react/</a></li>
+</ul>
+
+		</section>
+
+		<div class="post-tags">
+			
+			
+			
+		</div>
+		</article>
+</main>
+<footer>
+  <div style="display:flex"></div>
+  <div class="footer-info">
+    2024  <a
+      href="#">Kavindu Udara</a> | Send a mail <a href="mailto:karunasinghesampath38@gmail.com">Email Me</a>
+  </div>
+</footer>
+</div>
+    </body>
+</html>
