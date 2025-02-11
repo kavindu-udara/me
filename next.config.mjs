@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   basePath: '/me',
-  output: 'export',
+  output: 'export', // Enable static HTML export
   images: {
     unoptimized: true,
   },

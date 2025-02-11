@@ -19,7 +19,7 @@ export default function Home() {
     }
 
     return{
-      slug: encodeURIComponent(title),
+      slug: encodeURIComponent(title.toLowerCase().replace(/ /g, '-')),
       title
     }
 
