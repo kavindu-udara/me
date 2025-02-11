@@ -1,5 +1,4 @@
 {
-  "homepage": "https://kavindu-udara.github.io/me",
   "name": "me",
   "version": "0.1.0",
   "private": true,
@@ -8,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "deploy": "next build && gh-pages -d out"
+    "export": "next export",
+    "deploy": "npm run build && npm run export && gh-pages -d out"
   },
   "dependencies": {
     "gray-matter": "^4.0.3",
