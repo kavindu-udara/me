@@ -3,8 +3,10 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* --background: #ffffff; */
+  /* --foreground: #171717; */
+  --background: #1a1b26;
+  --foreground: #c0caf5;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -17,5 +19,171 @@
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-geist-sans), Helvetica, sans-serif;
+  font-size: 17px;
 }
+
+hr {
+  margin: 10px 0px;
+  opacity: 0.8;
+  height: 10px;
+}
+
+.markdown-container code {
+  background: #24283b;
+  color: #c0c8e4;
+  padding: 3px;
+  width: 100%;
+}
+
+.markdown-container strong {
+  color: #56c9ff;
+}
+
+.markdown-container ul {
+  margin-bottom: 20px;
+}
+
+.markdown-container ul li {
+  list-style-type: disc;
+  margin-left: 20px;
+  margin-bottom: 5px;
+}
+
+.markdown-container h1 {
+  color: #ff757f;
+  font-size: 32px;
+}
+
+.markdown-container h2 {
+  color: #e0af68;
+  font-size: 28px;
+}
+
+.markdown-container h3 {
+  color: #9ece6a;
+  font-size: 24px;
+}
+
+/* code */
+.markdown-container pre{
+  width: 100%;
+  padding: 30px;
+  background: #0a0a0a;
+  margin-bottom: 10px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 16px;
+}
+
+.markdown-container pre code{
+  background: transparent;
+  color: green;
+}
+
+/* Bullets */
+/* LEVEL 1: Bullet */
+.markdown-container > div > ul > li > {
+  height: 7px;
+  width: 7px;
+  border-radius: 50%;
+}
+
+/* LEVEL 2: Hollow bullet */
+.markdown-container > div > ul > li > ul > li > {
+  height: 7px;
+  width: 7px;
+  background-color: transparent;
+  border-style: solid;
+  border-radius: 50%;
+  border-width: 1px;
+}
+
+/* LEVEL 3: Solid square */
+.markdown-container
+  .markdown-preview-section
+  > div
+  > ul
+  > li
+  > ul
+  > li
+  > ul
+  > li
+  > {
+  height: 7px;
+  width: 7px;
+  border-radius: 0%;
+}
+
+/* LEVEL 4: Triangle */
+.markdown-container
+  .markdown-preview-section
+  > div
+  > ul
+  > li
+  > ul
+  > li
+  > ul
+  > li
+  > ul
+  > li
+  > {
+  height: 0;
+  width: 0;
+  background-color: transparent;
+  border-radius: 0%;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 8px solid;
+  border-right: 0px solid;
+}
+
+/* LEVEL 5: Small bullet */
+.markdown-container > div > ul > li > ul > li > ul > li > ul > li > ul > li > {
+  height: 4px;
+  width: 4px;
+  border-radius: 50%;
+}
+
+/* table */
+/*
+author: FireIsGood
+source: https://discord.com/channels/686053708261228577/702656734631821413/1112164539975340032
+*/
+
+:root table {
+  border-collapse: separate;
+  border-spacing: 0;
+  margin: 10px 0px;
+}
+th:first-of-type {
+  border-top-left-radius: 8px;
+}
+th:last-of-type {
+  border-top-right-radius: 8px;
+}
+tr:last-of-type td:first-of-type {
+  border-bottom-left-radius: 8px;
+}
+tr:last-of-type td:last-of-type {
+  border-bottom-right-radius: 8px;
+}
+
+:root :is(td, th) {
+  border-width: 2px 1px 1px 2px;
+  padding: 5px;
+}
+
+/* link */
+a {
+  text-decoration-line: underline;
+  text-decoration-thickness: 2px;
+  text-decoration-skip-ink: none;
+  font-weight: 600;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #56c9ff;
+  font-weight: 600;
+}
+

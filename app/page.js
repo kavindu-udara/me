@@ -1,35 +1,35 @@
-import fs from 'fs'
-import path from 'path'
-import matter from 'gray-matter';
+'use client'
 import Link from 'next/link'
+import { useEffect, useState } from 'react';
 
 export default function Home() {
 
-  const files = fs.readdirSync(path.join(process.cwd(), 'public/assets/readmes'));
+  const [blogs, setBlogs] = useState([]);
 
-  const readmes = files.map(filename => {
-    const fileContent = fs.readFileSync(
-      path.join(process.cwd(), 'public/assets/readmes', filename), 'utf-8'
-    )
+  const getReadmes = async () => {
+    await fetch("/me/api/blog", {
+      method: "GET"
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.message === "Blogs found") {
+          setBlogs(data.blogs);
+        }
+      })
+      .catch((error) => {
+        alert(error);
+      });
+  }
 
-    const {title} = matter(fileContent).data
-
-    if(!title){
-      return null
-    }
-
-    return{
-      slug: title.toLowerCase().replace(/ /g, '-'),
-      title
-    }
-
-  }).filter(readme => readme !== null)
+  useEffect(() => {
+    getReadmes();
+  }, [])
 
   return (
     <div className="max-w-4xl mx-auto p-8">
       <h1 className="text-3xl font-bold mb-8">Available READMEs</h1>
       <div className="space-y-4">
-        {readmes.map((readme, index) => (
+        {blogs.map((readme, index) => (
           <div key={index} className="p-4 border rounded hover:bg-gray-50">
             <Link href={`/${readme.slug}`} className="text-xl text-blue-600 hover:underline">
               {readme.title}
