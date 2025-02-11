@@ -1,50 +1,45 @@
-'use client'
-
-import React, { useEffect, useState } from 'react'
+import fs from 'fs'
+import path from 'path'
+import matter from 'gray-matter'
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
 
-export default function ReadmePage({ params }) {
-  const { slug } = React.use(params);
+export async function generateStaticParams() {
+  const files = fs.readdirSync(path.join(process.cwd(), 'public/assets/readmes'))
 
-  const [blogNotFound, setBlogNotFound] = useState(false);
-  const [blog, setBlog] = useState(null);
+  return files.map(filename => {
+    const fileContent = fs.readFileSync(
+      path.join(process.cwd(), 'public/assets/readmes', filename),
+      'utf8'
+    )
+    const { title } = matter(fileContent).data
+    return { slug: encodeURIComponent(title) }
+  })
+}
 
-  const getBlog = async () => {
-    try {
-      const res = await fetch(`/me/api/blog/${slug}`, {
-        method: "GET"
-      });
-      const data = await res.json();
-      if (data.message === "Blog found") {
-        setBlog(data.blog);
-      } else if (data.message = "Blog not found") {
-        setBlogNotFound(true);
-      }
-    } catch (error) {
-      alert(error);
-    }
-  }
+export default async function ReadmePage({ params }) {
+  const { slug } = await params;
 
-  useEffect(() => {
-    getBlog();
-  }, [slug]);
+  const file = fs.readdirSync(path.join(process.cwd(), 'public/assets/readmes')).find(filename => {
+    const fileContent = fs.readFileSync(
+      path.join(process.cwd(), 'public/assets/readmes', filename),
+      'utf8'
+    )
+    const { title } = matter(fileContent).data
+    return slug === encodeURIComponent(title)
+  })
+
+  const { content, data } = matter(fs.readFileSync(
+    path.join(process.cwd(), 'public/assets/readmes', file),
+    'utf8'
+  ))
 
   return (
-    <div className="readme-view max-w-4xl mx-auto p-8">
-      {blog && (
-        <div>
-          <h1 className="text-4xl font-bold text-[#ff757f] mb-4">{blog.data.title}</h1>
-          <div className='markdown-container'>
-            <ReactMarkdown remarkPlugins={[remarkGfm]}>{blog.content}</ReactMarkdown>
-          </div>
-        </div>
-      )}
-      {
-        blogNotFound && (
-          <div>Blog not found.</div>
-        )
-      }
+    <div className="max-w-4xl mx-auto p-8">
+      <div className='markdown-container'>
+        <h1 className="text-4xl font-bold mb-4">{data.title}</h1>
+        <ReactMarkdown remarkPlugins={[remarkGfm]} className="prose">{content}</ReactMarkdown>
+      </div>
     </div>
   )
 }
