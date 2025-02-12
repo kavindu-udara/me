@@ -3,18 +3,24 @@
 @tailwind utilities;
 
 :root {
-  /* --background: #ffffff; */
-  /* --foreground: #171717; */
-  --background: #1a1b26;
-  --foreground: #c0caf5;
+  --background: #fffdfc;
+  --foreground: #261b00;
+  --dark-color: #261c02;
+  --primary-color: #2b1b01;
+  --secondary-color: #8a7145;
+  --topic-color: #281d03;
+  --highlight-color: #fbeed2;
+  --quote-color: #f1e6c3;
+  --element-background-color: #faf7ef;
+  --element-foreground-color: #b6a87f;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #1a1b26;
+    --foreground: #c0caf5;
   }
-}
+} */
 
 body {
   color: var(--foreground);
@@ -25,19 +31,18 @@ body {
 
 hr {
   margin: 10px 0px;
-  opacity: 0.8;
+  opacity: 0.5;
   height: 10px;
+  color: var(--foreground);
 }
 
-.markdown-container code {
-  background: #24283b;
-  color: #c0c8e4;
-  padding: 3px;
-  width: 100%;
+button {
+  background-color: var(--element-background-color);
+  color: var(--element-foreground-color);
 }
 
 .markdown-container strong {
-  color: #56c9ff;
+  color: var(--dark-color);
 }
 
 .markdown-container ul {
@@ -50,39 +55,68 @@ hr {
   margin-bottom: 5px;
 }
 
-.markdown-container h1 {
-  color: #ff757f;
+h1 {
+  color: var(--topic-color);
   font-size: 32px;
 }
 
-.markdown-container h2 {
-  color: #e0af68;
+h2 {
+  color: var(--primary-color);
   font-size: 28px;
+  font-weight: 500;
 }
 
-.markdown-container h3 {
-  color: #9ece6a;
+h3 {
+  color: var(--primary-color);
   font-size: 24px;
 }
 
-/* paragraph */
-.markdown-container p {
-  margin-bottom: 5px;
-}
-
 /* code */
-.markdown-container pre{
+.markdown-container pre {
   width: 100%;
-  padding: 30px;
-  background: #0a0a0a;
-  margin-bottom: 10px;
-  font-family: 'Courier New', Courier, monospace;
+  padding: 20px;
+  background: var(--highlight-color);
+  margin: 20px 0;
+  font-family: "Courier New", Courier, monospace;
   font-size: 16px;
+  overflow-x: scroll;
+  border-radius: 10px;
 }
 
-.markdown-container pre code{
+/* code scrollbar */
+.markdown-container pre::-webkit-scrollbar {
+  height: 10px;
+}
+
+.markdown-container pre::-webkit-scrollbar-track {
   background: transparent;
-  color: green;
+  border-radius: 10px;
+}
+
+.markdown-container pre::-webkit-scrollbar-thumb {
+  background: var(--quote-color);
+  border-radius: 10px;
+}
+
+.markdown-container pre::-webkit-scrollbar-thumb:hover {
+  background: var(--topic-color);
+}
+
+.markdown-container pre code {
+  background: transparent;
+  color: var(--secondary-color);
+}
+
+/* code selection bg */
+.markdown-container pre code::selection {
+  background-color: var(--element-foreground-color);
+}
+
+/* blockquote */
+blockquote {
+  border-left: 5px solid var(--quote-color);
+  padding: 5px 10px;
+  margin: 5px 0;
 }
 
 /* Bullets */
@@ -150,10 +184,6 @@ hr {
 }
 
 /* table */
-/*
-author: FireIsGood
-source: https://discord.com/channels/686053708261228577/702656734631821413/1112164539975340032
-*/
 
 :root table {
   border-collapse: separate;
@@ -179,16 +209,15 @@ tr:last-of-type td:last-of-type {
 }
 
 /* link */
-a {
+a, Link {
   text-decoration-line: underline;
   text-decoration-thickness: 2px;
   text-decoration-skip-ink: none;
   font-weight: 600;
+  color: var(--secondary-color);
 }
 
-a:hover {
+a:hover, Link:hover {
   text-decoration: none;
-  color: #56c9ff;
   font-weight: 600;
 }
-

@@ -6,6 +6,8 @@ title: My First Blog Post
 
 Here is a bash script that creates a markdown file with the specified template in the directory 'public/assets/readmes/':
 
+> This is a blog quote text.
+
 ```bash
 #!/bin/bash
 
@@ -15,7 +17,7 @@ create_markdown_file() {
     current_date=$(date +"%Y-%m-%dT%H:%M:%S%z")
 
     # Get the title from the user
-    read -p "Enter the title of the markdown file: " title
+    read -p "Enter the title of the markdown file: " title read -p "Enter the title of the markdown file: " title read -p "Enter the title of the markdown file: " title read -p "Enter the title of the markdown file: " title
 
     # Replace spaces with underscores for the filename
     filename="${title// /_}.md"
