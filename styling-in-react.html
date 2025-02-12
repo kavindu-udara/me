@@ -1,0 +1,186 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="/me/_next/static/css/1d9abe454822820e.css" data-precedence="next"/><link rel="preload" as="script" fetchPriority="low" href="/me/_next/static/chunks/webpack-c1b67ad045facb22.js"/><script src="/me/_next/static/chunks/4bd1b696-692f10ba759dfb60.js" async=""></script><script src="/me/_next/static/chunks/517-fd2ad64921f0a1dc.js" async=""></script><script src="/me/_next/static/chunks/main-app-df5134c7fa6be6cf.js" async=""></script><script src="/me/_next/static/chunks/795d4814-6ed8d3b2717688f6.js" async=""></script><script src="/me/_next/static/chunks/8e1d74a4-cfd329457e90dfbc.js" async=""></script><script src="/me/_next/static/chunks/528-65f71005039027ed.js" async=""></script><script src="/me/_next/static/chunks/app/%5Bslug%5D/page-1ad8078ba5d2eeda.js" async=""></script><title>Kavindu Udara</title><meta name="description" content="Kavindu Udara&#x27;s blog"/><link rel="icon" href="/me/favicon.ico" type="image/x-icon" sizes="16x16"/><script src="/me/_next/static/chunks/polyfills-42372ed130431b0a.js" noModule=""></script></head><body class="__variable_a48e27 __variable_c96e19 antialiased"><div class="readme-view max-w-4xl mx-auto p-8"></div><div class="max-w-4xl mx-auto p-8"><div class="markdown-container"><div class="flex flex-wrap items-center justify-start gap-4 mb-5"><button class="p-4 rounded-lg cursor-pointer "><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M257.5 445.1l-22.2 22.2c-9.4 9.4-24.6 9.4-33.9 0L7 273c-9.4-9.4-9.4-24.6 0-33.9L201.4 44.7c9.4-9.4 24.6-9.4 33.9 0l22.2 22.2c9.5 9.5 9.3 25-.4 34.3L136.6 216H424c13.3 0 24 10.7 24 24v32c0 13.3-10.7 24-24 24H136.6l120.5 114.8c9.8 9.3 10 24.8.4 34.3z"></path></svg></button><h1 class="text-4xl font-bold ">Styling in React</h1></div><blockquote class="underline font-semibold">01 December 2024</blockquote><hr/><div class="prose"><p>In React, styling can be done in multiple ways depending on your preferences and the requirements of the project. You can use inline styles, external CSS, CSS Modules, or even CSS-in-JS solutions like <strong>Styled Components</strong> and utility-first frameworks like <strong>Tailwind CSS</strong>. This note will explore these approaches and when to use each.</p>
+<hr/>
+<h3>1. Inline Styles vs External CSS vs CSS Modules</h3>
+<h4>1.1 Inline Styles</h4>
+<p>Inline styles are applied directly within a component using a JavaScript object. Each style property is written in camelCase instead of hyphenated format.</p>
+<p><strong>Advantages</strong>:</p>
+<ul>
+<li>Simple and quick for small styles or individual components.</li>
+<li>Styles are scoped to the component, preventing accidental global styles.</li>
+</ul>
+<p><strong>Disadvantages</strong>:</p>
+<ul>
+<li>Not ideal for complex styles or media queries.</li>
+<li>Limited to basic styles and does not support pseudo-classes like <code>:hover</code> or <code>:focus</code>.</li>
+</ul>
+<h4>Example of Inline Styles:</h4>
+<pre><code class="language-jsx">function MyComponent() {
+    const buttonStyle = {
+        backgroundColor: &#x27;blue&#x27;,
+        color: &#x27;white&#x27;,
+        padding: &#x27;10px&#x27;,
+        borderRadius: &#x27;5px&#x27;
+    };
+
+    return &lt;button style={buttonStyle}&gt;Click Me&lt;/button&gt;;
+}
+</code></pre>
+<h4>1.2 External CSS</h4>
+<p>External CSS is the traditional way of styling websites. You create a <code>.css</code> file, and then link it to your React component by importing it. This approach is great for global styles and standard CSS features like pseudo-classes, media queries, and more.</p>
+<p><strong>Advantages</strong>:</p>
+<ul>
+<li>Good for global styles and shared styles between components.</li>
+<li>Easier to maintain for larger projects.</li>
+</ul>
+<p><strong>Disadvantages</strong>:</p>
+<ul>
+<li>Global scope can lead to unintended side effects (i.e., styles affecting unrelated components).</li>
+<li>No automatic scoping of styles, which can lead to conflicts.</li>
+</ul>
+<h4>Example of External CSS:</h4>
+<ol>
+<li><strong>Create a CSS file</strong> (<code>styles.css</code>):</li>
+</ol>
+<pre><code class="language-css">/* styles.css */
+.button {
+    background-color: blue;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+}
+</code></pre>
+<ol start="2">
+<li><strong>Import and use in a React component</strong>:</li>
+</ol>
+<pre><code class="language-jsx">import &#x27;./styles.css&#x27;;
+
+function MyComponent() {
+    return &lt;button className=&quot;button&quot;&gt;Click Me&lt;/button&gt;;
+}
+</code></pre>
+<h4>1.3 CSS Modules</h4>
+<p>CSS Modules help in <strong>scoping CSS locally</strong> to the component, meaning styles are applied only to the specific component and won&#x27;t interfere with other components. They use a unique class name behind the scenes to prevent style conflicts.</p>
+<p><strong>Advantages</strong>:</p>
+<ul>
+<li>Localized styling, meaning styles are scoped to the component.</li>
+<li>Prevents class name conflicts.</li>
+</ul>
+<p><strong>Disadvantages</strong>:</p>
+<ul>
+<li>Can become verbose if not structured well.</li>
+<li>Requires an additional setup (though this is done automatically in most React build tools).</li>
+</ul>
+<h4>Example of CSS Modules</h4>
+<ol>
+<li><strong>Create a CSS Module file</strong> (<code>MyComponent.module.css</code>):</li>
+</ol>
+<pre><code class="language-css">/* MyComponent.module.css */
+.button {
+    background-color: blue;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+}
+</code></pre>
+<ol start="2">
+<li><strong>Import and use the CSS Module in the component</strong>:</li>
+</ol>
+<pre><code class="language-jsx">import styles from &#x27;./MyComponent.module.css&#x27;;
+
+function MyComponent() {
+    return &lt;button className={styles.button}&gt;Click Me&lt;/button&gt;;
+}
+</code></pre>
+<hr/>
+<h3>2. Introduction to Styling Libraries</h3>
+<h4>2.1 Styled Components (CSS-in-JS)</h4>
+<p><strong>Styled Components</strong> is a popular <strong>CSS-in-JS</strong> library that allows you to write CSS directly in your JavaScript/JSX files. It provides the benefit of scoped styling (like CSS Modules), but also supports more dynamic styles by utilizing JavaScript to control the style based on props or state.</p>
+<p><strong>Advantages</strong>:</p>
+<ul>
+<li>Styles are scoped to the component by default.</li>
+<li>Supports dynamic styles based on props or state.</li>
+<li>Full access to JavaScript logic in styling (e.g., conditional styles).</li>
+</ul>
+<p><strong>Disadvantages</strong>:</p>
+<ul>
+<li>May add some overhead for small projects.</li>
+<li>Can result in larger JavaScript bundles due to the CSS-in-JS runtime.</li>
+</ul>
+<h4>Example of Styled Components:</h4>
+<ol>
+<li><strong>Install Styled Components</strong>:</li>
+</ol>
+<pre><code class="language-bash">npm install styled-components
+</code></pre>
+<ol start="2">
+<li><strong>Usage in a Component</strong>:</li>
+</ol>
+<pre><code class="language-jsx">import styled from &#x27;styled-components&#x27;;
+
+const Button = styled.button`
+    background-color: blue;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+
+    &amp;:hover {
+        background-color: darkblue;
+    }
+`;
+
+function MyComponent() {
+    return &lt;Button&gt;Click Me&lt;/Button&gt;;
+}
+</code></pre>
+<p>In this example, the <code>Button</code> component is styled using <code>styled-components</code>, and the styles are applied only to that component.</p>
+<hr/>
+<h4>2.2 Tailwind CSS</h4>
+<p><strong>Tailwind CSS</strong> is a utility-first CSS framework that provides low-level utility classes to build custom designs. It’s often used with React to create fast and responsive UIs without writing custom CSS.</p>
+<p><strong>Advantages</strong>:</p>
+<ul>
+<li>Fast to develop with, as it avoids the need to write custom CSS.</li>
+<li>Encourages reusable and consistent styles with utility classes.</li>
+<li>Built-in responsive design and other common design patterns.</li>
+</ul>
+<p><strong>Disadvantages</strong>:</p>
+<ul>
+<li>May result in long class names in JSX, which can be harder to read.</li>
+<li>Over-reliance on utility classes can lead to repetitive code.</li>
+</ul>
+<h4>Example of Tailwind CSS:</h4>
+<ol>
+<li><strong>Install Tailwind CSS</strong>:</li>
+</ol>
+<pre><code class="language-bash">npm install tailwindcss
+npx tailwindcss init
+</code></pre>
+<ol start="2">
+<li><strong>Setup and use in your React component</strong>:</li>
+</ol>
+<pre><code class="language-jsx">function MyComponent() {
+    return (
+        &lt;button className=&quot;bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-700&quot;&gt;
+            Click Me
+        &lt;/button&gt;
+    );
+}
+</code></pre>
+<p>In this example, Tailwind utility classes are used to style the <code>button</code> element with background color, text color, padding, rounded corners, and a hover effect.</p>
+<hr/>
+<h3>Summary of Styling in React</h3>
+<table><thead><tr><th><strong>Method</strong></th><th><strong>Advantages</strong></th><th><strong>Disadvantages</strong></th></tr></thead><tbody><tr><td><strong>Inline Styles</strong></td><td>Quick to implement, scoped to component</td><td>Limited features (no pseudo-classes), not ideal for complex styles</td></tr><tr><td><strong>External CSS</strong></td><td>Great for global styles and easy to maintain</td><td>Global scope can lead to conflicts, no automatic scoping</td></tr><tr><td><strong>CSS Modules</strong></td><td>Scoped to components, prevents style conflicts</td><td>Requires extra setup, can become verbose</td></tr><tr><td><strong>Styled Components (CSS-in-JS)</strong></td><td>Scoped styles, dynamic styling based on props or state</td><td>Can add overhead, larger bundle sizes</td></tr><tr><td><strong>Tailwind CSS</strong></td><td>Fast development, utility classes for consistent design</td><td>Long class names in JSX, can result in repetitive code</td></tr></tbody></table>
+<hr/>
+<h3>Conclusion</h3>
+<ul>
+<li><strong>Inline styles</strong> are useful for simple, scoped styling but are limited for complex scenarios.</li>
+<li><strong>External CSS</strong> is great for global styles but can cause conflicts in larger projects.</li>
+<li><strong>CSS Modules</strong> provide scoped styles without the global leakage of external CSS.</li>
+<li><strong>Styled Components</strong> offer powerful, dynamic styling capabilities within React using JavaScript.</li>
+<li><strong>Tailwind CSS</strong> is an efficient utility-first CSS framework that speeds up development with a consistent design pattern.</li>
+</ul>
+<p>Choosing the right approach depends on the project size, requirements, and preferences. For small projects, inline styles or external CSS might suffice, while larger projects may benefit from CSS Modules, Styled Components, or Tailwind CSS.</p>
+<hr/>
+<h1>References</h1>
+<ul>
+<li><a href="https://legacy.reactjs.org/docs/faq-styling.html">https://legacy.reactjs.org/docs/faq-styling.html</a></li>
+</ul></div></div><div class="flex justify-between mt-8"><button class="px-4 py-2 rounded-lg cursor-pointer "><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M257.5 445.1l-22.2 22.2c-9.4 9.4-24.6 9.4-33.9 0L7 273c-9.4-9.4-9.4-24.6 0-33.9L201.4 44.7c9.4-9.4 24.6-9.4 33.9 0l22.2 22.2c9.5 9.5 9.3 25-.4 34.3L136.6 216H424c13.3 0 24 10.7 24 24v32c0 13.3-10.7 24-24 24H136.6l120.5 114.8c9.8 9.3 10 24.8.4 34.3z"></path></svg></button><button class="px-4 py-2 rounded-lg cursor-pointer"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path fill="none" d="M0 0h24v24H0V0z"></path><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"></path></svg></button></div></div><script src="/me/_next/static/chunks/webpack-c1b67ad045facb22.js" async=""></script><script>(self.__next_f=self.__next_f||[]).push([0])</script><script>self.__next_f.push([1,"1:\"$Sreact.fragment\"\n2:I[5244,[],\"\"]\n3:I[3866,[],\"\"]\n5:I[6213,[],\"OutletBoundary\"]\n7:I[6213,[],\"MetadataBoundary\"]\n9:I[6213,[],\"ViewportBoundary\"]\nb:I[4835,[],\"\"]\n:HL[\"/me/_next/static/css/1d9abe454822820e.css\",\"style\"]\n"])</script><script>self.__next_f.push([1,"0:{\"P\":null,\"b\":\"atdZIXSGzkPFBsJtwNKu0\",\"p\":\"/me\",\"c\":[\"\",\"styling-in-react\"],\"i\":false,\"f\":[[[\"\",{\"children\":[[\"slug\",\"styling-in-react\",\"d\"],{\"children\":[\"__PAGE__\",{}]}]},\"$undefined\",\"$undefined\",true],[\"\",[\"$\",\"$1\",\"c\",{\"children\":[[[\"$\",\"link\",\"0\",{\"rel\":\"stylesheet\",\"href\":\"/me/_next/static/css/1d9abe454822820e.css\",\"precedence\":\"next\",\"crossOrigin\":\"$undefined\",\"nonce\":\"$undefined\"}]],[\"$\",\"html\",null,{\"lang\":\"en\",\"children\":[\"$\",\"body\",null,{\"className\":\"__variable_a48e27 __variable_c96e19 antialiased\",\"children\":[[\"$\",\"div\",null,{\"className\":\"readme-view max-w-4xl mx-auto p-8\"}],[\"$\",\"$L2\",null,{\"parallelRouterKey\":\"children\",\"segmentPath\":[\"children\"],\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$L3\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":[[],[[\"$\",\"title\",null,{\"children\":\"404: This page could not be found.\"}],[\"$\",\"div\",null,{\"style\":{\"fontFamily\":\"system-ui,\\\"Segoe UI\\\",Roboto,Helvetica,Arial,sans-serif,\\\"Apple Color Emoji\\\",\\\"Segoe UI Emoji\\\"\",\"height\":\"100vh\",\"textAlign\":\"center\",\"display\":\"flex\",\"flexDirection\":\"column\",\"alignItems\":\"center\",\"justifyContent\":\"center\"},\"children\":[\"$\",\"div\",null,{\"children\":[[\"$\",\"style\",null,{\"dangerouslySetInnerHTML\":{\"__html\":\"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}\"}}],[\"$\",\"h1\",null,{\"className\":\"next-error-h1\",\"style\":{\"display\":\"inline-block\",\"margin\":\"0 20px 0 0\",\"padding\":\"0 23px 0 0\",\"fontSize\":24,\"fontWeight\":500,\"verticalAlign\":\"top\",\"lineHeight\":\"49px\"},\"children\":404}],[\"$\",\"div\",null,{\"style\":{\"display\":\"inline-block\"},\"children\":[\"$\",\"h2\",null,{\"style\":{\"fontSize\":14,\"fontWeight\":400,\"lineHeight\":\"49px\",\"margin\":0},\"children\":\"This page could not be found.\"}]}]]}]}]]],\"forbidden\":\"$undefined\",\"unauthorized\":\"$undefined\"}]]}]}]]}],{\"children\":[[\"slug\",\"styling-in-react\",\"d\"],[\"$\",\"$1\",\"c\",{\"children\":[null,[\"$\",\"$L2\",null,{\"parallelRouterKey\":\"children\",\"segmentPath\":[\"children\",\"$0:f:0:1:2:children:0\",\"children\"],\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$L3\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":\"$undefined\",\"forbidden\":\"$undefined\",\"unauthorized\":\"$undefined\"}]]}],{\"children\":[\"__PAGE__\",[\"$\",\"$1\",\"c\",{\"children\":[\"$L4\",null,[\"$\",\"$L5\",null,{\"children\":\"$L6\"}]]}],{},null,false]},null,false]},null,false],[\"$\",\"$1\",\"h\",{\"children\":[null,[\"$\",\"$1\",\"dmd3LGpebGdeoeH4XYsrA\",{\"children\":[[\"$\",\"$L7\",null,{\"children\":\"$L8\"}],[\"$\",\"$L9\",null,{\"children\":\"$La\"}],null]}]]}],false]],\"m\":\"$undefined\",\"G\":[\"$b\",\"$undefined\"],\"s\":false,\"S\":true}\n"])</script><script>self.__next_f.push([1,"c:I[5577,[\"479\",\"static/chunks/795d4814-6ed8d3b2717688f6.js\",\"711\",\"static/chunks/8e1d74a4-cfd329457e90dfbc.js\",\"528\",\"static/chunks/528-65f71005039027ed.js\",\"182\",\"static/chunks/app/%5Bslug%5D/page-1ad8078ba5d2eeda.js\"],\"default\"]\nd:T1c5c,"])</script><script>self.__next_f.push([1,"\r\nIn React, styling can be done in multiple ways depending on your preferences and the requirements of the project. You can use inline styles, external CSS, CSS Modules, or even CSS-in-JS solutions like **Styled Components** and utility-first frameworks like **Tailwind CSS**. This note will explore these approaches and when to use each.\r\n\r\n---\r\n\r\n### 1. Inline Styles vs External CSS vs CSS Modules\r\n\r\n#### 1.1 Inline Styles\r\n\r\nInline styles are applied directly within a component using a JavaScript object. Each style property is written in camelCase instead of hyphenated format.\r\n\r\n**Advantages**:\r\n\r\n- Simple and quick for small styles or individual components.\r\n- Styles are scoped to the component, preventing accidental global styles.\r\n\r\n**Disadvantages**:\r\n\r\n- Not ideal for complex styles or media queries.\r\n- Limited to basic styles and does not support pseudo-classes like `:hover` or `:focus`.\r\n\r\n#### Example of Inline Styles:\r\n\r\n```jsx\r\nfunction MyComponent() {\r\n    const buttonStyle = {\r\n        backgroundColor: 'blue',\r\n        color: 'white',\r\n        padding: '10px',\r\n        borderRadius: '5px'\r\n    };\r\n\r\n    return \u003cbutton style={buttonStyle}\u003eClick Me\u003c/button\u003e;\r\n}\r\n```\r\n\r\n#### 1.2 External CSS\r\n\r\nExternal CSS is the traditional way of styling websites. You create a `.css` file, and then link it to your React component by importing it. This approach is great for global styles and standard CSS features like pseudo-classes, media queries, and more.\r\n\r\n**Advantages**:\r\n\r\n- Good for global styles and shared styles between components.\r\n- Easier to maintain for larger projects.\r\n\r\n**Disadvantages**:\r\n\r\n- Global scope can lead to unintended side effects (i.e., styles affecting unrelated components).\r\n- No automatic scoping of styles, which can lead to conflicts.\r\n\r\n#### Example of External CSS:\r\n\r\n1. **Create a CSS file** (`styles.css`):\r\n\r\n```css\r\n/* styles.css */\r\n.button {\r\n    background-color: blue;\r\n    color: white;\r\n    padding: 10px;\r\n    border-radius: 5px;\r\n}\r\n```\r\n\r\n2. **Import and use in a React component**:\r\n\r\n```jsx\r\nimport './styles.css';\r\n\r\nfunction MyComponent() {\r\n    return \u003cbutton className=\"button\"\u003eClick Me\u003c/button\u003e;\r\n}\r\n```\r\n\r\n#### 1.3 CSS Modules\r\n\r\nCSS Modules help in **scoping CSS locally** to the component, meaning styles are applied only to the specific component and won't interfere with other components. They use a unique class name behind the scenes to prevent style conflicts.\r\n\r\n**Advantages**:\r\n\r\n- Localized styling, meaning styles are scoped to the component.\r\n- Prevents class name conflicts.\r\n\r\n**Disadvantages**:\r\n\r\n- Can become verbose if not structured well.\r\n- Requires an additional setup (though this is done automatically in most React build tools).\r\n\r\n#### Example of CSS Modules\r\n\r\n1. **Create a CSS Module file** (`MyComponent.module.css`):\r\n\r\n```css\r\n/* MyComponent.module.css */\r\n.button {\r\n    background-color: blue;\r\n    color: white;\r\n    padding: 10px;\r\n    border-radius: 5px;\r\n}\r\n```\r\n\r\n2. **Import and use the CSS Module in the component**:\r\n\r\n```jsx\r\nimport styles from './MyComponent.module.css';\r\n\r\nfunction MyComponent() {\r\n    return \u003cbutton className={styles.button}\u003eClick Me\u003c/button\u003e;\r\n}\r\n```\r\n\r\n---\r\n\r\n### 2. Introduction to Styling Libraries\r\n\r\n#### 2.1 Styled Components (CSS-in-JS)\r\n\r\n**Styled Components** is a popular **CSS-in-JS** library that allows you to write CSS directly in your JavaScript/JSX files. It provides the benefit of scoped styling (like CSS Modules), but also supports more dynamic styles by utilizing JavaScript to control the style based on props or state.\r\n\r\n**Advantages**:\r\n\r\n- Styles are scoped to the component by default.\r\n- Supports dynamic styles based on props or state.\r\n- Full access to JavaScript logic in styling (e.g., conditional styles).\r\n\r\n**Disadvantages**:\r\n\r\n- May add some overhead for small projects.\r\n- Can result in larger JavaScript bundles due to the CSS-in-JS runtime.\r\n\r\n#### Example of Styled Components:\r\n\r\n1. **Install Styled Components**:\r\n\r\n```bash\r\nnpm install styled-components\r\n```\r\n\r\n2. **Usage in a Component**:\r\n\r\n```jsx\r\nimport styled from 'styled-components';\r\n\r\nconst Button = styled.button`\r\n    background-color: blue;\r\n    color: white;\r\n    padding: 10px;\r\n    border-radius: 5px;\r\n\r\n    \u0026:hover {\r\n        background-color: darkblue;\r\n    }\r\n`;\r\n\r\nfunction MyComponent() {\r\n    return \u003cButton\u003eClick Me\u003c/Button\u003e;\r\n}\r\n```\r\n\r\nIn this example, the `Button` component is styled using `styled-components`, and the styles are applied only to that component.\r\n\r\n---\r\n\r\n#### 2.2 Tailwind CSS\r\n\r\n**Tailwind CSS** is a utility-first CSS framework that provides low-level utility classes to build custom designs. It’s often used with React to create fast and responsive UIs without writing custom CSS.\r\n\r\n**Advantages**:\r\n\r\n- Fast to develop with, as it avoids the need to write custom CSS.\r\n- Encourages reusable and consistent styles with utility classes.\r\n- Built-in responsive design and other common design patterns.\r\n\r\n**Disadvantages**:\r\n\r\n- May result in long class names in JSX, which can be harder to read.\r\n- Over-reliance on utility classes can lead to repetitive code.\r\n\r\n#### Example of Tailwind CSS:\r\n\r\n1. **Install Tailwind CSS**:\r\n\r\n```bash\r\nnpm install tailwindcss\r\nnpx tailwindcss init\r\n```\r\n\r\n2. **Setup and use in your React component**:\r\n\r\n```jsx\r\nfunction MyComponent() {\r\n    return (\r\n        \u003cbutton className=\"bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-700\"\u003e\r\n            Click Me\r\n        \u003c/button\u003e\r\n    );\r\n}\r\n```\r\n\r\nIn this example, Tailwind utility classes are used to style the `button` element with background color, text color, padding, rounded corners, and a hover effect.\r\n\r\n---\r\n\r\n### Summary of Styling in React\r\n\r\n|**Method**|**Advantages**|**Disadvantages**|\r\n|---|---|---|\r\n|**Inline Styles**|Quick to implement, scoped to component|Limited features (no pseudo-classes), not ideal for complex styles|\r\n|**External CSS**|Great for global styles and easy to maintain|Global scope can lead to conflicts, no automatic scoping|\r\n|**CSS Modules**|Scoped to components, prevents style conflicts|Requires extra setup, can become verbose|\r\n|**Styled Components (CSS-in-JS)**|Scoped styles, dynamic styling based on props or state|Can add overhead, larger bundle sizes|\r\n|**Tailwind CSS**|Fast development, utility classes for consistent design|Long class names in JSX, can result in repetitive code|\r\n\r\n---\r\n\r\n### Conclusion\r\n\r\n- **Inline styles** are useful for simple, scoped styling but are limited for complex scenarios.\r\n- **External CSS** is great for global styles but can cause conflicts in larger projects.\r\n- **CSS Modules** provide scoped styles without the global leakage of external CSS.\r\n- **Styled Components** offer powerful, dynamic styling capabilities within React using JavaScript.\r\n- **Tailwind CSS** is an efficient utility-first CSS framework that speeds up development with a consistent design pattern.\r\n\r\nChoosing the right approach depends on the project size, requirements, and preferences. For small projects, inline styles or external CSS might suffice, while larger projects may benefit from CSS Modules, Styled Components, or Tailwind CSS.\r\n\r\n---\r\n# References\r\n\r\n- https://legacy.reactjs.org/docs/faq-styling.html"])</script><script>self.__next_f.push([1,"4:[\"$\",\"$Lc\",null,{\"content\":\"$d\",\"data\":{\"date\":\"$D2024-12-01T16:12:01.000Z\",\"draft\":false,\"title\":\"Styling in React\"}}]\n"])</script><script>self.__next_f.push([1,"a:[[\"$\",\"meta\",\"0\",{\"name\":\"viewport\",\"content\":\"width=device-width, initial-scale=1\"}]]\n8:[[\"$\",\"meta\",\"0\",{\"charSet\":\"utf-8\"}],[\"$\",\"title\",\"1\",{\"children\":\"Kavindu Udara\"}],[\"$\",\"meta\",\"2\",{\"name\":\"description\",\"content\":\"Kavindu Udara's blog\"}],[\"$\",\"link\",\"3\",{\"rel\":\"icon\",\"href\":\"/me/favicon.ico\",\"type\":\"image/x-icon\",\"sizes\":\"16x16\"}]]\n"])</script><script>self.__next_f.push([1,"6:null\n"])</script></body></html>
