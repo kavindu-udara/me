@@ -1,12 +1,12 @@
+'use server'
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
-import ReactMarkdown from 'react-markdown';
-import remarkGfm from 'remark-gfm';
-import formatDateString from '../../controllers/dateController';
-import { FaArrowLeft } from "react-icons/fa";
+
+import ReadmeClient from '../_components/ReadmeClient';
 
 export async function generateStaticParams() {
+
   const files = fs.readdirSync(path.join(process.cwd(), 'public/assets/readmes'));
 
   return files.map(filename => {
@@ -45,19 +45,6 @@ export default async function ReadmePage({ params }) {
     'utf8'
   ));
 
-  return (
-    <div className="max-w-4xl mx-auto p-8">
-      <div className='markdown-container'>
-        <div className='flex flex-wrap items-center justify-start gap-4 mb-5'>
-          <button className="p-4 rounded-lg cursor-pointer ">
-            <FaArrowLeft />
-          </button>
-          <h1 className="text-4xl font-bold ">{data.title}</h1>
-        </div>
-        <blockquote className='underline font-semibold'>{formatDateString(data.date)}</blockquote>
-        <hr />
-        <ReactMarkdown remarkPlugins={[remarkGfm]} className="prose">{content}</ReactMarkdown>
-      </div>
-    </div>
-  );
+  return <ReadmeClient content={content} data={data} />
+
 }
