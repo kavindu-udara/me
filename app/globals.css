@@ -65,6 +65,11 @@ hr {
   font-size: 24px;
 }
 
+/* paragraph */
+.markdown-container p {
+  margin-bottom: 5px;
+}
+
 /* code */
 .markdown-container pre{
   width: 100%;
