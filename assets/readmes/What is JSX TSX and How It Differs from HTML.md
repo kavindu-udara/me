@@ -1,7 +1,7 @@
 ---
 date: 2024-12-01T21:18:48+05:30
 draft: false
-title: What Is JSX, TSX and How It Differs From HTML
+title: What Is JSX TSX and How It Differs From HTML
 ---
 
 - **JSX (JavaScript XML)**: A syntax extension for JavaScript used in React to describe the UI structure.
