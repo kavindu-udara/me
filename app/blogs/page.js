@@ -23,6 +23,14 @@ const readmes = fetchReadmes('public/assets/blogs/readmes');
           </div>
         ))}
       </div>
+
+        {/* paginations */}
+        <div className="flex justify-between mt-8">
+          <Link href="/blogs/page/1">1</Link>
+          <Link href="/blogs/page/2">2</Link>
+          <Link href="/blogs/page/3">3</Link>
+        </div>
+
     </div>
   );
 
