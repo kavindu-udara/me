@@ -1,3 +1,4 @@
+import { fetchReadmes } from '../../controllers/readmeController';
 import ProjectCard from '../_components/ProjectCard';
 
 const page = () => {
