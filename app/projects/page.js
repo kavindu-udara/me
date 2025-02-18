@@ -1,8 +1,3 @@
-import Link from 'next/link'
-import ReactMarkdown from 'react-markdown';
-import truncatedContent, { fetchReadmes } from '../../controllers/readmeController';
-import formatDateString from '../../controllers/dateController';
-import Image from 'next/image';
 import ProjectCard from '../_components/ProjectCard';
 
 const page = () => {
@@ -10,7 +5,7 @@ const page = () => {
     return (
         <div className="max-w-4xl mx-auto p-8">
             <h1 className=" gradient-text mb-5 text-center">My Projects</h1>
-            <div className='grid grid-cols-2 gap-8'>
+            <div className='grid md:grid-cols-2 gap-8 grid-cols-1'>
                 {readmes.map((readme, index) => (
                     <ProjectCard readme={readme} key={index} />
                 ))}
