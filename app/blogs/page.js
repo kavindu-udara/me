@@ -18,7 +18,7 @@ const readmes = fetchReadmes('public/assets/blogs/readmes');
             <ReactMarkdown className="prose my-5">
               {truncatedContent(readme.content)}
             </ReactMarkdown>
-            <Link href={`/${readme.slug}`} >Learn More</Link>
+            <Link href={`/blogs/${readme.slug}`} >Learn More</Link>
             <hr/>
           </div>
         ))}

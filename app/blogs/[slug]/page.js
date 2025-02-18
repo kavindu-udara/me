@@ -1,10 +1,10 @@
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
-import '../../public/styles/prism.css';
+import '../../../public/styles/prism.css';
 
-import ReadmeClient from '../_components/ReadmeClient';
-import { fetchReadme } from '../../controllers/readmeController';
+import BlogReadmeClient from '../../_components/BlogReadmeClient';
+import { fetchReadme } from '../../../controllers/readmeController';
 
 const FILE_PATH = 'public/assets/blogs/readmes';
 
@@ -26,6 +26,6 @@ export default async function ReadmePage({ params }) {
 
   const { content, data } = fetchReadme(FILE_PATH, slug);
 
-  return <ReadmeClient content={content} data={data} />
+  return <BlogReadmeClient content={content} data={data} />
 
 }

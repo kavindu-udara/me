@@ -19,7 +19,6 @@
   :root {
     /* Dark Mode */
     --background: #070707; 
-    /* --background: #1a1200; */
     --foreground: #fff5e6; /* Warm off-white/cream for text */
     --dark-color: #faf4e6; /* Light beige (inverted from dark-color) */
     --primary-color: #c2a15c; /* Golden accent (warmer version of your secondary) */
@@ -145,6 +144,10 @@ h3 {
 .markdown-container pre code {
   background: transparent;
   color: var(--secondary-color);
+}
+
+.markdown-container code{
+  @apply bg-purple-300/30 rounded-full px-2;
 }
 
 /* code selection bg */

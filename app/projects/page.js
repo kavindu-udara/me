@@ -2,7 +2,7 @@ import { fetchReadmes } from '../../controllers/readmeController';
 import ProjectCard from '../_components/ProjectCard';
 
 const page = () => {
-    const readmes = fetchReadmes('public/assets/blogs/readmes');
+    const readmes = fetchReadmes('public/assets/projects/readmes');
     return (
         <div className="max-w-4xl mx-auto p-8">
             <h1 className=" gradient-text mb-5 text-center">My Projects</h1>

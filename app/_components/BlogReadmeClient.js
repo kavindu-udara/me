@@ -11,7 +11,7 @@ import Button from './Button';
 import SmallButton from './SmallButton';
 import '../../public/styles/prism.js';
 
-export default function ReadmeClient({ content, data }) {
+export default function BlogReadmeClient({ content, data }) {
     const router = useRouter();
 
     const [isUrlCopied, setIsUrlCopied] = useState(false);
