@@ -14,6 +14,7 @@
   "dependencies": {
     "gray-matter": "^4.0.3",
     "me": "file:",
+    "motion": "^12.4.4",
     "next": "15.1.6",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",

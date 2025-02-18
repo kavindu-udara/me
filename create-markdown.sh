@@ -12,7 +12,7 @@ create_markdown_file() {
     filename="${title// /_}.md"
     
     # Define the directory
-    dir="public/assets/readmes/"
+    dir="public/assets/"
     
     # Create the directory if it doesn't exist
     mkdir -p $dir
