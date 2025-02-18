@@ -6,6 +6,8 @@ title: build and deploy project to github
 
 Great to hear that you're ready to publish your React project on GitHub Pages! Here are the steps you can follow to build and deploy your project:
 
+![Example Image](assets/blogs/images/test-image.jpeg)
+
 1. **Install gh-pages**:
    First, you need to install the `gh-pages` package as a dev dependency. Open your terminal and run the following command:
    ```sh

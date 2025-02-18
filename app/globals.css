@@ -225,6 +225,11 @@ li{
   border-radius: 50%;
 }
 
+/* images */
+.markdown-container img{
+  @apply rounded-lg align-middle my-8 shadow-lg;
+}
+
 /* table */
 
 :root table {
