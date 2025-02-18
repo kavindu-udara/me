@@ -145,9 +145,9 @@ h3 {
 }
 
 /* code selection bg */
-.markdown-container pre code::selection {
-  background-color: var(--element-foreground-color);
-}
+/* .markdown-container pre code::selection { */
+  /* background-color: var(--element-foreground-color); */
+/* } */
 
 /* blockquote */
 blockquote {
