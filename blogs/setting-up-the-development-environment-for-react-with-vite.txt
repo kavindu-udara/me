@@ -1,0 +1,98 @@
+1:"$Sreact.fragment"
+2:I[8173,["173","static/chunks/173-ba153405bf2e16a5.js","156","static/chunks/app/blogs/page-a10b7c3bdac66571.js"],""]
+3:I[5244,[],""]
+4:I[3866,[],""]
+6:I[6213,[],"OutletBoundary"]
+8:I[6213,[],"MetadataBoundary"]
+a:I[6213,[],"ViewportBoundary"]
+c:I[4835,[],""]
+:HL["/me/_next/static/css/2ea1e1ce088a1881.css","style"]
+:HL["/me/_next/static/css/12c033eb3dc8055a.css","style"]
+0:{"P":null,"b":"llIlekknR3Jrs4wYTYkz9","p":"/me","c":["","blogs","setting-up-the-development-environment-for-react-with-vite"],"i":false,"f":[[["",{"children":["blogs",{"children":[["slug","setting-up-the-development-environment-for-react-with-vite","d"],{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/me/_next/static/css/2ea1e1ce088a1881.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"en","children":["$","body",null,{"className":"__variable_a48e27 __variable_c96e19 antialiased pt-24","children":[["$","header",null,{"className":"fixed top-0 left-0 w-full backdrop-blur-md p-4 z-20 rounded-b-lg","children":["$","div",null,{"className":"flex items-center justify-around w-full","children":[["$","div",null,{"className":"w-36","children":["$","$L2",null,{"href":"/","className":"text-xl gradient-text","children":"Kavindu Udara"}]}],["$","div",null,{"className":"flex justify-evenly w-1/2","children":["$","ul",null,{"className":"flex flex-wrap gap-8 font-semibold","children":[["$","li",null,{"className":"cursor-pointer gradient-text","children":["$","$L2",null,{"href":"/blogs","children":"blog"}]}],["$","li",null,{"children":["$","$L2",null,{"href":"/projects","children":"projects"}]}],["$","li",null,{"children":["$","$L2",null,{"href":"/","children":"Contact"}]}]]}]}],["$","div",null,{"className":"w-18 h-18 rounded-full bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 ","children":["$","img",null,{"className":"w-12 h-12 rounded-full border-2 border-transparent cursor-pointer","src":"https://avatars.githubusercontent.com/u/155027870?v=4","alt":"Kavindu Udara"}]}]]}]}],["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[],["$","div",null,{"className":"flex flex-col items-center justify-center h-screen text-center","children":[["$","h1",null,{"className":"text-3xl mb-1","children":"404 - Page Not Found"}],["$","p",null,{"children":"Oops! The page you are looking for does not exist."}],["$","$L2",null,{"href":"/","children":"Go back to Home"}]]}]],"forbidden":"$undefined","unauthorized":"$undefined"}]]}]}]]}],{"children":["blogs",["$","$1","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","blogs","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["slug","setting-up-the-development-environment-for-react-with-vite","d"],["$","$1","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","blogs","children","$0:f:0:1:2:children:2:children:0","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":["__PAGE__",["$","$1","c",{"children":["$L5",[["$","link","0",{"rel":"stylesheet","href":"/me/_next/static/css/12c033eb3dc8055a.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","$L6",null,{"children":"$L7"}]]}],{},null,false]},null,false]},null,false]},null,false],["$","$1","h",{"children":[null,["$","$1","MlD3Fm93bopuHllAKoiRJ",{"children":[["$","$L8",null,{"children":"$L9"}],["$","$La",null,{"children":"$Lb"}],null]}]]}],false]],"m":"$undefined","G":["$c","$undefined"],"s":false,"S":true}
+d:I[6037,["479","static/chunks/795d4814-6ed8d3b2717688f6.js","711","static/chunks/8e1d74a4-cfd329457e90dfbc.js","528","static/chunks/528-a5c0d2acc96ad623.js","457","static/chunks/457-aa1fa21876c7c3cd.js","744","static/chunks/app/blogs/%5Bslug%5D/page-acd2720b24fcd3fa.js"],"default"]
+e:Ta89,
+### 1. Installing Node.js and npm
+
+Node.js and npm (Node Package Manager) are prerequisites for creating and running React applications.
+
+1. **Download and Install Node.js**:
+	- Visit the [Node.js official website](https://nodejs.org).
+	- Download the **LTS** version for stability.
+	- Follow the installation instructions for your operating system.
+2. **Verify Installation**:
+	- Open a terminal and run the following commands:
+```bash
+node -v
+npm -v
+```
+
+- These commands will display the installed versions of Node.js and npm.
+
+---
+
+### 2. Setting up a React Project
+
+1. Install Vite
+	Vite is a fast frontend build tool.
+	- Open a terminal and run
+```bash
+npm create vite@latest my-react-app --template react
+```
+	
+	- Replace `my-react-app` with your desired project name.
+
+2. **Navigate to the Project Directory**:
+```bash
+cd my-react-app
+```
+
+3. **Install Dependencies**
+	Run the following command to install all the dependencies
+	```bash
+	npm install
+	```
+
+4. **Run the Development Server**
+	Start the Vite development server to preview your app
+	```bash
+	npm run dev
+	```
+
+	- The terminal will display a URL (e.g., `http://localhost:5173`) where you can view your app in the browser.
+
+---
+### 3. Overview of the Project Folder Structure
+
+Once the setup is complete, your project folder will look like this:
+
+```perl
+my-react-app/
+├── node_modules/           # Installed npm packages
+├── public/                 # Static assets (e.g., images, icons)
+│   └── vite.svg            # Default Vite logo
+├── src/                    # Source code of your application
+│   ├── App.css             # Styles for the App component
+│   ├── App.jsx             # Main React component
+│   ├── main.jsx            # Entry point for the application
+│   └── index.css           # Global styles
+├── .gitignore              # Files and folders to ignore in Git
+├── package.json            # Project metadata and dependencies
+├── vite.config.js          # Configuration file for Vite
+└── README.md               # Project documentation
+```
+
+**Key Files and Folders**:
+
+- **`src/main.jsx`**: Entry point for your React app. It renders the root component (`App.jsx`).
+- **`src/App.jsx`**: Default React component created by Vite. Customize this file to start building your app.
+- **`public/`**: Store static assets like images or fonts.
+- **`package.json`**: Manages dependencies, scripts, and project metadata.
+- **`vite.config.js`**: Customize the build tool's behavior (e.g., plugins, server options).
+
+---
+# References
+
+- https://vite.dev/guide/5:["$","$Ld",null,{"content":"$e","data":{"date":"$D2024-12-01T15:38:32.000Z","draft":false,"title":"Setting Up the Development Environment for React With Vite"}}]
+b:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+9:[["$","meta","0",{"charSet":"utf-8"}],["$","title","1",{"children":"Kavindu Udara"}],["$","meta","2",{"name":"description","content":"This is my personal website I use to showcase my projects and blogs."}],["$","link","3",{"rel":"icon","href":"/me/favicon.ico","type":"image/x-icon","sizes":"16x16"}]]
+7:null

@@ -1,0 +1,173 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="preload" as="image" href="https://avatars.githubusercontent.com/u/155027870?v=4"/><link rel="stylesheet" href="/me/_next/static/css/2ea1e1ce088a1881.css" data-precedence="next"/><link rel="stylesheet" href="/me/_next/static/css/12c033eb3dc8055a.css" data-precedence="next"/><link rel="preload" as="script" fetchPriority="low" href="/me/_next/static/chunks/webpack-30f11a584e4235ac.js"/><script src="/me/_next/static/chunks/4bd1b696-aaf09b882924c802.js" async=""></script><script src="/me/_next/static/chunks/517-61d17bd65f182962.js" async=""></script><script src="/me/_next/static/chunks/main-app-df5134c7fa6be6cf.js" async=""></script><script src="/me/_next/static/chunks/173-ba153405bf2e16a5.js" async=""></script><script src="/me/_next/static/chunks/app/blogs/page-a10b7c3bdac66571.js" async=""></script><script src="/me/_next/static/chunks/795d4814-6ed8d3b2717688f6.js" async=""></script><script src="/me/_next/static/chunks/8e1d74a4-cfd329457e90dfbc.js" async=""></script><script src="/me/_next/static/chunks/528-a5c0d2acc96ad623.js" async=""></script><script src="/me/_next/static/chunks/457-aa1fa21876c7c3cd.js" async=""></script><script src="/me/_next/static/chunks/app/blogs/%5Bslug%5D/page-acd2720b24fcd3fa.js" async=""></script><title>Kavindu Udara</title><meta name="description" content="This is my personal website I use to showcase my projects and blogs."/><link rel="icon" href="/me/favicon.ico" type="image/x-icon" sizes="16x16"/><script src="/me/_next/static/chunks/polyfills-42372ed130431b0a.js" noModule=""></script></head><body class="__variable_a48e27 __variable_c96e19 antialiased pt-24"><header class="fixed top-0 left-0 w-full backdrop-blur-md p-4 z-20 rounded-b-lg"><div class="flex items-center justify-around w-full"><div class="w-36"><a class="text-xl gradient-text" href="/me">Kavindu Udara</a></div><div class="flex justify-evenly w-1/2"><ul class="flex flex-wrap gap-8 font-semibold"><li class="cursor-pointer gradient-text"><a href="/me/blogs">blog</a></li><li><a href="/me/projects">projects</a></li><li><a href="/me">Contact</a></li></ul></div><div class="w-18 h-18 rounded-full bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 "><img class="w-12 h-12 rounded-full border-2 border-transparent cursor-pointer" src="https://avatars.githubusercontent.com/u/155027870?v=4" alt="Kavindu Udara"/></div></div></header><div class="max-w-4xl mx-auto p-8"><div class="markdown-container"><div class="flex flex-wrap items-center justify-start gap-4 mb-5"><button class="p-4 rounded-lg cursor-pointer gradient-bg"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M257.5 445.1l-22.2 22.2c-9.4 9.4-24.6 9.4-33.9 0L7 273c-9.4-9.4-9.4-24.6 0-33.9L201.4 44.7c9.4-9.4 24.6-9.4 33.9 0l22.2 22.2c9.5 9.5 9.3 25-.4 34.3L136.6 216H424c13.3 0 24 10.7 24 24v32c0 13.3-10.7 24-24 24H136.6l120.5 114.8c9.8 9.3 10 24.8.4 34.3z"></path></svg></button><h1 class="text-4xl gradient-text ">React Lifecycle and Hooks</h1></div><blockquote class="underline font-semibold">01 December 2024</blockquote><hr/><div class="prose"><p>React hooks allow functional components to manage side effects, state, and other lifecycle events. The introduction of hooks has simplified component lifecycle management and enabled functional components to become more powerful and feature-rich.</p>
+<hr/>
+<h3>1. Introduction to React Hooks</h3>
+<p>React hooks are functions that allow you to &quot;hook into&quot; React features from functional components. They provide a more declarative approach to handling component logic compared to class components. The most commonly used hooks are:</p>
+<ul>
+<li><code>useState</code>: To manage state in functional components.</li>
+<li><code>useEffect</code>: For handling side effects, such as fetching data or subscribing to external services.</li>
+<li><code>useContext</code>: For accessing context data.</li>
+</ul>
+<p>The <code>useEffect</code> hook, in particular, is essential for dealing with side effects in React.</p>
+<hr/>
+<h3>2. The <code>useEffect</code> Hook</h3>
+<p>The <code>useEffect</code> hook allows you to perform <strong>side effects</strong> in functional components. Side effects refer to operations that affect something outside the component, such as:</p>
+<ul>
+<li>Fetching data from an API.</li>
+<li>Subscribing to a service or event.</li>
+<li>Manipulating the DOM.</li>
+<li>Setting up timers.</li>
+</ul>
+<p>The <code>useEffect</code> hook replaces the lifecycle methods found in class components (<code>componentDidMount</code>, <code>componentDidUpdate</code>, and <code>componentWillUnmount</code>).</p>
+<h4>Basic Syntax of <code>useEffect</code></h4>
+<pre><code class="language-jsx">useEffect(() =&gt; {
+    // Code to run on component mount or state change
+}, [dependencies]);
+</code></pre>
+<ul>
+<li>The first argument is a <strong>function</strong> containing the side-effect logic.</li>
+<li>The second argument is an <strong>array of dependencies</strong>. If any of the dependencies change, the effect will run again.</li>
+</ul>
+<h4>Example: Basic <code>useEffect</code> Usage</h4>
+<pre><code class="language-jsx">import React, { useState, useEffect } from &#x27;react&#x27;;
+
+function DataFetchingComponent() {
+    const [data, setData] = useState([]);
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() =&gt; {
+        fetch(&#x27;https://api.example.com/data&#x27;)
+            .then(response =&gt; response.json())
+            .then(data =&gt; {
+                setData(data);
+                setLoading(false);
+            });
+    }, []); // Empty dependency array ensures effect runs only once (componentDidMount)
+
+    if (loading) return &lt;p&gt;Loading...&lt;/p&gt;;
+
+    return (
+        &lt;div&gt;
+            &lt;h1&gt;Data&lt;/h1&gt;
+            &lt;ul&gt;
+                {data.map(item =&gt; (
+                    &lt;li key={item.id}&gt;{item.name}&lt;/li&gt;
+                ))}
+            &lt;/ul&gt;
+        &lt;/div&gt;
+    );
+}
+</code></pre>
+<p>In this example:</p>
+<ul>
+<li><strong><code>useEffect</code></strong> fetches data from an API when the component mounts (similar to <code>componentDidMount</code> in class components).</li>
+<li>The empty dependency array <code>[]</code> means the effect runs only once after the initial render.</li>
+</ul>
+<hr/>
+<h3>3. Cleanup with <code>useEffect</code></h3>
+<p>Sometimes, you need to clean up after an effect, such as clearing timers or unsubscribing from an event. You can return a <strong>cleanup function</strong> from <code>useEffect</code>.</p>
+<h4>Example: Cleanup in <code>useEffect</code></h4>
+<pre><code class="language-jsx">import React, { useEffect, useState } from &#x27;react&#x27;;
+
+function Timer() {
+    const [seconds, setSeconds] = useState(0);
+
+    useEffect(() =&gt; {
+        const timerId = setInterval(() =&gt; {
+            setSeconds(prev =&gt; prev + 1);
+        }, 1000);
+
+        // Cleanup function to clear the interval
+        return () =&gt; {
+            clearInterval(timerId);
+        };
+    }, []); // Runs once, equivalent to componentDidMount
+
+    return &lt;h1&gt;Seconds: {seconds}&lt;/h1&gt;;
+}
+</code></pre>
+<p>In this example:</p>
+<ul>
+<li>A timer is set using <code>setInterval</code> in the <code>useEffect</code> hook.</li>
+<li>The <strong>cleanup function</strong> returned from <code>useEffect</code> clears the interval when the component is unmounted or before the effect is re-run.</li>
+</ul>
+<hr/>
+<h3>4. Conditional Execution of <code>useEffect</code></h3>
+<p>By specifying <strong>dependencies</strong>, you can control when the <code>useEffect</code> hook runs:</p>
+<ul>
+<li>If the dependency array is empty <code>[]</code>, the effect runs only once when the component mounts.</li>
+<li>If the array contains values (e.g., <code>[prop, state]</code>), the effect runs when any of those values change.</li>
+</ul>
+<h4>Example: Conditional <code>useEffect</code></h4>
+<pre><code class="language-jsx">import React, { useState, useEffect } from &#x27;react&#x27;;
+
+function Counter() {
+    const [count, setCount] = useState(0);
+
+    useEffect(() =&gt; {
+        document.title = `You clicked ${count} times`;
+    }, [count]); // Runs whenever count changes
+
+    return (
+        &lt;div&gt;
+            &lt;p&gt;You clicked {count} times&lt;/p&gt;
+            &lt;button onClick={() =&gt; setCount(count + 1)}&gt;Click me&lt;/button&gt;
+        &lt;/div&gt;
+    );
+}
+</code></pre>
+<p>In this example:</p>
+<ul>
+<li>The effect runs only when the <code>count</code> state changes, and it updates the document title with the current count.</li>
+</ul>
+<hr/>
+<h3>5. Use Case Examples of <code>useEffect</code></h3>
+<ul>
+<li>
+<p><strong>Fetching data on mount:</strong></p>
+<pre><code class="language-jsx">useEffect(() =&gt; {
+  fetchData();
+}, []);  // Runs once after component mount
+</code></pre>
+</li>
+<li>
+<p><strong>Subscribing to an event:</strong></p>
+<pre><code class="language-jsx">useEffect(() =&gt; {
+  const handleResize = () =&gt; {
+    console.log(&#x27;Window resized&#x27;);
+  };
+  window.addEventListener(&#x27;resize&#x27;, handleResize);
+
+  // Cleanup on component unmount
+  return () =&gt; {
+    window.removeEventListener(&#x27;resize&#x27;, handleResize);
+  };
+}, []); // Runs once
+</code></pre>
+</li>
+<li>
+<p><strong>Setting up a timer:</strong></p>
+<pre><code class="language-jsx">useEffect(() =&gt; {
+  const timer = setInterval(() =&gt; {
+    console.log(&#x27;Timer ticked&#x27;);
+  }, 1000);
+
+  return () =&gt; clearInterval(timer);  // Cleanup on unmount
+}, []);
+</code></pre>
+</li>
+</ul>
+<hr/>
+<h3>Summary of <code>useEffect</code></h3>
+<table><thead><tr><th><strong>Feature</strong></th><th><strong>Description</strong></th><th><strong>Example</strong></th></tr></thead><tbody><tr><td><strong>Basic usage</strong></td><td>Handles side effects like fetching data, setting up timers, etc.</td><td><code>useEffect(() =&gt; { fetchData(); }, []);</code></td></tr><tr><td><strong>Dependencies</strong></td><td>Array of values that the effect depends on.</td><td><code>useEffect(() =&gt; { console.log(count); }, [count]);</code></td></tr><tr><td><strong>Cleanup function</strong></td><td>Cleans up after effects (e.g., clearing timers).</td><td><code>return () =&gt; { clearInterval(timer); }</code></td></tr><tr><td><strong>Conditional execution</strong></td><td>Control when the effect runs by setting dependencies.</td><td><code>useEffect(() =&gt; { console.log(&#x27;Mounted!&#x27;); }, []);</code></td></tr></tbody></table>
+<hr/>
+<h3>Conclusion</h3>
+<ul>
+<li><strong><code>useEffect</code></strong> is a powerful hook for managing side effects in functional components.</li>
+<li>It allows you to <strong>fetch data</strong>, <strong>subscribe to events</strong>, and handle <strong>cleanups</strong> in a declarative way.</li>
+<li>By using the dependency array, you can control when the effect should run, making it highly flexible and efficient.</li>
+</ul>
+<hr/>
+<h1>References</h1>
+<ul>
+<li><a href="https://www.freecodecamp.org/news/react-lifecycle-methods-and-hooks-for-beginners/">https://www.freecodecamp.org/news/react-lifecycle-methods-and-hooks-for-beginners/</a></li>
+</ul></div></div><div class="flex justify-between mt-8"><button class="px-4 py-2 rounded-lg cursor-pointer  bg-gradient-to-r from-purple-400 via-pink-500 to-red-500"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M257.5 445.1l-22.2 22.2c-9.4 9.4-24.6 9.4-33.9 0L7 273c-9.4-9.4-9.4-24.6 0-33.9L201.4 44.7c9.4-9.4 24.6-9.4 33.9 0l22.2 22.2c9.5 9.5 9.3 25-.4 34.3L136.6 216H424c13.3 0 24 10.7 24 24v32c0 13.3-10.7 24-24 24H136.6l120.5 114.8c9.8 9.3 10 24.8.4 34.3z"></path></svg></button><button class="px-4 py-2 rounded-lg cursor-pointer  bg-gradient-to-r from-purple-400 via-pink-500 to-red-500"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path fill="none" d="M0 0h24v24H0V0z"></path><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"></path></svg></button></div></div><script src="/me/_next/static/chunks/webpack-30f11a584e4235ac.js" async=""></script><script>(self.__next_f=self.__next_f||[]).push([0])</script><script>self.__next_f.push([1,"1:\"$Sreact.fragment\"\n2:I[8173,[\"173\",\"static/chunks/173-ba153405bf2e16a5.js\",\"156\",\"static/chunks/app/blogs/page-a10b7c3bdac66571.js\"],\"\"]\n3:I[5244,[],\"\"]\n4:I[3866,[],\"\"]\n6:I[6213,[],\"OutletBoundary\"]\n8:I[6213,[],\"MetadataBoundary\"]\na:I[6213,[],\"ViewportBoundary\"]\nc:I[4835,[],\"\"]\n:HL[\"/me/_next/static/css/2ea1e1ce088a1881.css\",\"style\"]\n:HL[\"/me/_next/static/css/12c033eb3dc8055a.css\",\"style\"]\n"])</script><script>self.__next_f.push([1,"0:{\"P\":null,\"b\":\"llIlekknR3Jrs4wYTYkz9\",\"p\":\"/me\",\"c\":[\"\",\"blogs\",\"react-lifecycle-and-hooks\"],\"i\":false,\"f\":[[[\"\",{\"children\":[\"blogs\",{\"children\":[[\"slug\",\"react-lifecycle-and-hooks\",\"d\"],{\"children\":[\"__PAGE__\",{}]}]}]},\"$undefined\",\"$undefined\",true],[\"\",[\"$\",\"$1\",\"c\",{\"children\":[[[\"$\",\"link\",\"0\",{\"rel\":\"stylesheet\",\"href\":\"/me/_next/static/css/2ea1e1ce088a1881.css\",\"precedence\":\"next\",\"crossOrigin\":\"$undefined\",\"nonce\":\"$undefined\"}]],[\"$\",\"html\",null,{\"lang\":\"en\",\"children\":[\"$\",\"body\",null,{\"className\":\"__variable_a48e27 __variable_c96e19 antialiased pt-24\",\"children\":[[\"$\",\"header\",null,{\"className\":\"fixed top-0 left-0 w-full backdrop-blur-md p-4 z-20 rounded-b-lg\",\"children\":[\"$\",\"div\",null,{\"className\":\"flex items-center justify-around w-full\",\"children\":[[\"$\",\"div\",null,{\"className\":\"w-36\",\"children\":[\"$\",\"$L2\",null,{\"href\":\"/\",\"className\":\"text-xl gradient-text\",\"children\":\"Kavindu Udara\"}]}],[\"$\",\"div\",null,{\"className\":\"flex justify-evenly w-1/2\",\"children\":[\"$\",\"ul\",null,{\"className\":\"flex flex-wrap gap-8 font-semibold\",\"children\":[[\"$\",\"li\",null,{\"className\":\"cursor-pointer gradient-text\",\"children\":[\"$\",\"$L2\",null,{\"href\":\"/blogs\",\"children\":\"blog\"}]}],[\"$\",\"li\",null,{\"children\":[\"$\",\"$L2\",null,{\"href\":\"/projects\",\"children\":\"projects\"}]}],[\"$\",\"li\",null,{\"children\":[\"$\",\"$L2\",null,{\"href\":\"/\",\"children\":\"Contact\"}]}]]}]}],[\"$\",\"div\",null,{\"className\":\"w-18 h-18 rounded-full bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 \",\"children\":[\"$\",\"img\",null,{\"className\":\"w-12 h-12 rounded-full border-2 border-transparent cursor-pointer\",\"src\":\"https://avatars.githubusercontent.com/u/155027870?v=4\",\"alt\":\"Kavindu Udara\"}]}]]}]}],[\"$\",\"$L3\",null,{\"parallelRouterKey\":\"children\",\"segmentPath\":[\"children\"],\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$L4\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":[[],[\"$\",\"div\",null,{\"className\":\"flex flex-col items-center justify-center h-screen text-center\",\"children\":[[\"$\",\"h1\",null,{\"className\":\"text-3xl mb-1\",\"children\":\"404 - Page Not Found\"}],[\"$\",\"p\",null,{\"children\":\"Oops! The page you are looking for does not exist.\"}],[\"$\",\"$L2\",null,{\"href\":\"/\",\"children\":\"Go back to Home\"}]]}]],\"forbidden\":\"$undefined\",\"unauthorized\":\"$undefined\"}]]}]}]]}],{\"children\":[\"blogs\",[\"$\",\"$1\",\"c\",{\"children\":[null,[\"$\",\"$L3\",null,{\"parallelRouterKey\":\"children\",\"segmentPath\":[\"children\",\"blogs\",\"children\"],\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$L4\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":\"$undefined\",\"forbidden\":\"$undefined\",\"unauthorized\":\"$undefined\"}]]}],{\"children\":[[\"slug\",\"react-lifecycle-and-hooks\",\"d\"],[\"$\",\"$1\",\"c\",{\"children\":[null,[\"$\",\"$L3\",null,{\"parallelRouterKey\":\"children\",\"segmentPath\":[\"children\",\"blogs\",\"children\",\"$0:f:0:1:2:children:2:children:0\",\"children\"],\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$L4\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":\"$undefined\",\"forbidden\":\"$undefined\",\"unauthorized\":\"$undefined\"}]]}],{\"children\":[\"__PAGE__\",[\"$\",\"$1\",\"c\",{\"children\":[\"$L5\",[[\"$\",\"link\",\"0\",{\"rel\":\"stylesheet\",\"href\":\"/me/_next/static/css/12c033eb3dc8055a.css\",\"precedence\":\"next\",\"crossOrigin\":\"$undefined\",\"nonce\":\"$undefined\"}]],[\"$\",\"$L6\",null,{\"children\":\"$L7\"}]]}],{},null,false]},null,false]},null,false]},null,false],[\"$\",\"$1\",\"h\",{\"children\":[null,[\"$\",\"$1\",\"A9cQa8cYzodDIl6ERLHG6\",{\"children\":[[\"$\",\"$L8\",null,{\"children\":\"$L9\"}],[\"$\",\"$La\",null,{\"children\":\"$Lb\"}],null]}]]}],false]],\"m\":\"$undefined\",\"G\":[\"$c\",\"$undefined\"],\"s\":false,\"S\":true}\n"])</script><script>self.__next_f.push([1,"d:I[6037,[\"479\",\"static/chunks/795d4814-6ed8d3b2717688f6.js\",\"711\",\"static/chunks/8e1d74a4-cfd329457e90dfbc.js\",\"528\",\"static/chunks/528-a5c0d2acc96ad623.js\",\"457\",\"static/chunks/457-aa1fa21876c7c3cd.js\",\"744\",\"static/chunks/app/blogs/%5Bslug%5D/page-acd2720b24fcd3fa.js\"],\"default\"]\ne:T19af,"])</script><script>self.__next_f.push([1,"\r\nReact hooks allow functional components to manage side effects, state, and other lifecycle events. The introduction of hooks has simplified component lifecycle management and enabled functional components to become more powerful and feature-rich.\r\n\r\n---\r\n\r\n### 1. Introduction to React Hooks\r\n\r\nReact hooks are functions that allow you to \"hook into\" React features from functional components. They provide a more declarative approach to handling component logic compared to class components. The most commonly used hooks are:\r\n\r\n- `useState`: To manage state in functional components.\r\n- `useEffect`: For handling side effects, such as fetching data or subscribing to external services.\r\n- `useContext`: For accessing context data.\r\n\r\nThe `useEffect` hook, in particular, is essential for dealing with side effects in React.\r\n\r\n---\r\n\r\n### 2. The `useEffect` Hook\r\n\r\nThe `useEffect` hook allows you to perform **side effects** in functional components. Side effects refer to operations that affect something outside the component, such as:\r\n\r\n- Fetching data from an API.\r\n- Subscribing to a service or event.\r\n- Manipulating the DOM.\r\n- Setting up timers.\r\n\r\nThe `useEffect` hook replaces the lifecycle methods found in class components (`componentDidMount`, `componentDidUpdate`, and `componentWillUnmount`).\r\n\r\n#### Basic Syntax of `useEffect`\r\n\r\n```jsx\r\nuseEffect(() =\u003e {\r\n    // Code to run on component mount or state change\r\n}, [dependencies]);\r\n```\r\n\r\n- The first argument is a **function** containing the side-effect logic.\r\n- The second argument is an **array of dependencies**. If any of the dependencies change, the effect will run again.\r\n\r\n#### Example: Basic `useEffect` Usage\r\n\r\n```jsx\r\nimport React, { useState, useEffect } from 'react';\r\n\r\nfunction DataFetchingComponent() {\r\n    const [data, setData] = useState([]);\r\n    const [loading, setLoading] = useState(true);\r\n\r\n    useEffect(() =\u003e {\r\n        fetch('https://api.example.com/data')\r\n            .then(response =\u003e response.json())\r\n            .then(data =\u003e {\r\n                setData(data);\r\n                setLoading(false);\r\n            });\r\n    }, []); // Empty dependency array ensures effect runs only once (componentDidMount)\r\n\r\n    if (loading) return \u003cp\u003eLoading...\u003c/p\u003e;\r\n\r\n    return (\r\n        \u003cdiv\u003e\r\n            \u003ch1\u003eData\u003c/h1\u003e\r\n            \u003cul\u003e\r\n                {data.map(item =\u003e (\r\n                    \u003cli key={item.id}\u003e{item.name}\u003c/li\u003e\r\n                ))}\r\n            \u003c/ul\u003e\r\n        \u003c/div\u003e\r\n    );\r\n}\r\n```\r\n\r\nIn this example:\r\n\r\n- **`useEffect`** fetches data from an API when the component mounts (similar to `componentDidMount` in class components).\r\n- The empty dependency array `[]` means the effect runs only once after the initial render.\r\n\r\n---\r\n\r\n### 3. Cleanup with `useEffect`\r\n\r\nSometimes, you need to clean up after an effect, such as clearing timers or unsubscribing from an event. You can return a **cleanup function** from `useEffect`.\r\n\r\n#### Example: Cleanup in `useEffect`\r\n\r\n```jsx\r\nimport React, { useEffect, useState } from 'react';\r\n\r\nfunction Timer() {\r\n    const [seconds, setSeconds] = useState(0);\r\n\r\n    useEffect(() =\u003e {\r\n        const timerId = setInterval(() =\u003e {\r\n            setSeconds(prev =\u003e prev + 1);\r\n        }, 1000);\r\n\r\n        // Cleanup function to clear the interval\r\n        return () =\u003e {\r\n            clearInterval(timerId);\r\n        };\r\n    }, []); // Runs once, equivalent to componentDidMount\r\n\r\n    return \u003ch1\u003eSeconds: {seconds}\u003c/h1\u003e;\r\n}\r\n```\r\n\r\nIn this example:\r\n\r\n- A timer is set using `setInterval` in the `useEffect` hook.\r\n- The **cleanup function** returned from `useEffect` clears the interval when the component is unmounted or before the effect is re-run.\r\n\r\n---\r\n\r\n### 4. Conditional Execution of `useEffect`\r\n\r\nBy specifying **dependencies**, you can control when the `useEffect` hook runs:\r\n\r\n- If the dependency array is empty `[]`, the effect runs only once when the component mounts.\r\n- If the array contains values (e.g., `[prop, state]`), the effect runs when any of those values change.\r\n\r\n#### Example: Conditional `useEffect`\r\n\r\n```jsx\r\nimport React, { useState, useEffect } from 'react';\r\n\r\nfunction Counter() {\r\n    const [count, setCount] = useState(0);\r\n\r\n    useEffect(() =\u003e {\r\n        document.title = `You clicked ${count} times`;\r\n    }, [count]); // Runs whenever count changes\r\n\r\n    return (\r\n        \u003cdiv\u003e\r\n            \u003cp\u003eYou clicked {count} times\u003c/p\u003e\r\n            \u003cbutton onClick={() =\u003e setCount(count + 1)}\u003eClick me\u003c/button\u003e\r\n        \u003c/div\u003e\r\n    );\r\n}\r\n```\r\n\r\nIn this example:\r\n\r\n- The effect runs only when the `count` state changes, and it updates the document title with the current count.\r\n\r\n---\r\n\r\n### 5. Use Case Examples of `useEffect`\r\n\r\n- **Fetching data on mount:**\r\n    \r\n    ```jsx\r\n    useEffect(() =\u003e {\r\n      fetchData();\r\n    }, []);  // Runs once after component mount\r\n    ```\r\n    \r\n- **Subscribing to an event:**\r\n    \r\n    ```jsx\r\n    useEffect(() =\u003e {\r\n      const handleResize = () =\u003e {\r\n        console.log('Window resized');\r\n      };\r\n      window.addEventListener('resize', handleResize);\r\n    \r\n      // Cleanup on component unmount\r\n      return () =\u003e {\r\n        window.removeEventListener('resize', handleResize);\r\n      };\r\n    }, []); // Runs once\r\n    ```\r\n    \r\n- **Setting up a timer:**\r\n    \r\n    ```jsx\r\n    useEffect(() =\u003e {\r\n      const timer = setInterval(() =\u003e {\r\n        console.log('Timer ticked');\r\n      }, 1000);\r\n    \r\n      return () =\u003e clearInterval(timer);  // Cleanup on unmount\r\n    }, []);\r\n    ```\r\n    \r\n\r\n---\r\n\r\n### Summary of `useEffect`\r\n\r\n|**Feature**|**Description**|**Example**|\r\n|---|---|---|\r\n|**Basic usage**|Handles side effects like fetching data, setting up timers, etc.|`useEffect(() =\u003e { fetchData(); }, []);`|\r\n|**Dependencies**|Array of values that the effect depends on.|`useEffect(() =\u003e { console.log(count); }, [count]);`|\r\n|**Cleanup function**|Cleans up after effects (e.g., clearing timers).|`return () =\u003e { clearInterval(timer); }`|\r\n|**Conditional execution**|Control when the effect runs by setting dependencies.|`useEffect(() =\u003e { console.log('Mounted!'); }, []);`|\r\n\r\n---\r\n\r\n### Conclusion\r\n\r\n- **`useEffect`** is a powerful hook for managing side effects in functional components.\r\n- It allows you to **fetch data**, **subscribe to events**, and handle **cleanups** in a declarative way.\r\n- By using the dependency array, you can control when the effect should run, making it highly flexible and efficient.\r\n\r\n---\r\n# References\r\n\r\n- https://www.freecodecamp.org/news/react-lifecycle-methods-and-hooks-for-beginners/"])</script><script>self.__next_f.push([1,"5:[\"$\",\"$Ld\",null,{\"content\":\"$e\",\"data\":{\"date\":\"$D2024-12-01T16:10:04.000Z\",\"draft\":false,\"title\":\"React Lifecycle and Hooks\"}}]\n"])</script><script>self.__next_f.push([1,"b:[[\"$\",\"meta\",\"0\",{\"name\":\"viewport\",\"content\":\"width=device-width, initial-scale=1\"}]]\n9:[[\"$\",\"meta\",\"0\",{\"charSet\":\"utf-8\"}],[\"$\",\"title\",\"1\",{\"children\":\"Kavindu Udara\"}],[\"$\",\"meta\",\"2\",{\"name\":\"description\",\"content\":\"This is my personal website I use to showcase my projects and blogs.\"}],[\"$\",\"link\",\"3\",{\"rel\":\"icon\",\"href\":\"/me/favicon.ico\",\"type\":\"image/x-icon\",\"sizes\":\"16x16\"}]]\n"])</script><script>self.__next_f.push([1,"7:null\n"])</script></body></html>

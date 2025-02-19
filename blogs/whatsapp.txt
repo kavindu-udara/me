@@ -1,0 +1,161 @@
+1:"$Sreact.fragment"
+2:I[8173,["173","static/chunks/173-ba153405bf2e16a5.js","156","static/chunks/app/blogs/page-a10b7c3bdac66571.js"],""]
+3:I[5244,[],""]
+4:I[3866,[],""]
+6:I[6213,[],"OutletBoundary"]
+8:I[6213,[],"MetadataBoundary"]
+a:I[6213,[],"ViewportBoundary"]
+c:I[4835,[],""]
+:HL["/me/_next/static/css/2ea1e1ce088a1881.css","style"]
+:HL["/me/_next/static/css/12c033eb3dc8055a.css","style"]
+0:{"P":null,"b":"llIlekknR3Jrs4wYTYkz9","p":"/me","c":["","blogs","whatsapp"],"i":false,"f":[[["",{"children":["blogs",{"children":[["slug","whatsapp","d"],{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/me/_next/static/css/2ea1e1ce088a1881.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"en","children":["$","body",null,{"className":"__variable_a48e27 __variable_c96e19 antialiased pt-24","children":[["$","header",null,{"className":"fixed top-0 left-0 w-full backdrop-blur-md p-4 z-20 rounded-b-lg","children":["$","div",null,{"className":"flex items-center justify-around w-full","children":[["$","div",null,{"className":"w-36","children":["$","$L2",null,{"href":"/","className":"text-xl gradient-text","children":"Kavindu Udara"}]}],["$","div",null,{"className":"flex justify-evenly w-1/2","children":["$","ul",null,{"className":"flex flex-wrap gap-8 font-semibold","children":[["$","li",null,{"className":"cursor-pointer gradient-text","children":["$","$L2",null,{"href":"/blogs","children":"blog"}]}],["$","li",null,{"children":["$","$L2",null,{"href":"/projects","children":"projects"}]}],["$","li",null,{"children":["$","$L2",null,{"href":"/","children":"Contact"}]}]]}]}],["$","div",null,{"className":"w-18 h-18 rounded-full bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 ","children":["$","img",null,{"className":"w-12 h-12 rounded-full border-2 border-transparent cursor-pointer","src":"https://avatars.githubusercontent.com/u/155027870?v=4","alt":"Kavindu Udara"}]}]]}]}],["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[],["$","div",null,{"className":"flex flex-col items-center justify-center h-screen text-center","children":[["$","h1",null,{"className":"text-3xl mb-1","children":"404 - Page Not Found"}],["$","p",null,{"children":"Oops! The page you are looking for does not exist."}],["$","$L2",null,{"href":"/","children":"Go back to Home"}]]}]],"forbidden":"$undefined","unauthorized":"$undefined"}]]}]}]]}],{"children":["blogs",["$","$1","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","blogs","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["slug","whatsapp","d"],["$","$1","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","blogs","children","$0:f:0:1:2:children:2:children:0","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":["__PAGE__",["$","$1","c",{"children":["$L5",[["$","link","0",{"rel":"stylesheet","href":"/me/_next/static/css/12c033eb3dc8055a.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","$L6",null,{"children":"$L7"}]]}],{},null,false]},null,false]},null,false]},null,false],["$","$1","h",{"children":[null,["$","$1","C5ET2kh-MeBMa9BIpplFT",{"children":[["$","$L8",null,{"children":"$L9"}],["$","$La",null,{"children":"$Lb"}],null]}]]}],false]],"m":"$undefined","G":["$c","$undefined"],"s":false,"S":true}
+d:I[6037,["479","static/chunks/795d4814-6ed8d3b2717688f6.js","711","static/chunks/8e1d74a4-cfd329457e90dfbc.js","528","static/chunks/528-a5c0d2acc96ad623.js","457","static/chunks/457-aa1fa21876c7c3cd.js","744","static/chunks/app/blogs/%5Bslug%5D/page-acd2720b24fcd3fa.js"],"default"]
+e:T19eb,Yes, you can integrate WhatsApp into your web application using the **WhatsApp Business API**. This API allows you to send and receive messages, manage contacts, and automate interactions with users on WhatsApp. Here's how you can get started:
+
+---
+
+### **1. WhatsApp Business API**
+The WhatsApp Business API is the official way to integrate WhatsApp into your application. It is designed for businesses and developers to interact with users at scale.
+
+#### **Steps to Use WhatsApp Business API:**
+1. **Sign Up for a WhatsApp Business Account**:
+   - Go to the [Meta for Developers](https://developers.facebook.com/docs/whatsapp) page and create a developer account.
+   - Apply for access to the WhatsApp Business API.
+
+2. **Choose a Solution Provider**:
+   - Meta (formerly Facebook) requires you to work with an official **Business Solution Provider (BSP)** to use the API. Some popular providers include:
+     - Twilio
+     - Vonage (formerly Nexmo)
+     - MessageBird
+     - WATI (WhatsApp Team Inbox)
+     - Gupshup
+   - These providers simplify the setup process and often provide additional tools for managing WhatsApp messages.
+
+3. **Set Up the API**:
+   - Follow the documentation provided by your chosen BSP to set up the API.
+   - You'll need to authenticate your account, configure webhooks, and set up a phone number for WhatsApp.
+
+4. **Integrate with Your Web Application**:
+   - Use the API endpoints provided by your BSP to send and receive messages.
+   - Example: Send a message using the API:
+     ```json
+     POST /v1/messages
+     {
+       "to": "recipient_phone_number",
+       "type": "text",
+       "text": {
+         "body": "Hello, this is a test message!"
+       }
+     }
+     ```
+
+5. **Handle Webhooks**:
+   - Set up webhooks to receive incoming messages, delivery statuses, and other events from WhatsApp.
+
+---
+
+### **2. Twilio API for WhatsApp**
+Twilio is one of the most popular providers for WhatsApp integration. It simplifies the process of sending and receiving messages.
+
+#### **Steps to Use Twilio for WhatsApp:**
+1. **Create a Twilio Account**:
+   - Sign up at [Twilio](https://www.twilio.com/).
+
+2. **Enable WhatsApp on Twilio**:
+   - Go to the Twilio Console and enable WhatsApp for your account.
+   - Twilio provides a sandbox for testing, where you can send messages to a pre-approved number.
+
+3. **Integrate Twilio API**:
+   - Use Twilio's API to send and receive WhatsApp messages.
+   - Example (Python):
+     ```python
+     from twilio.rest import Client
+
+     account_sid = 'your_account_sid'
+     auth_token = 'your_auth_token'
+     client = Client(account_sid, auth_token)
+
+     message = client.messages.create(
+         from_='whatsapp:+14155238886',  # Twilio's WhatsApp sandbox number
+         body='Hello, this is a test message!',
+         to='whatsapp:recipient_phone_number'
+     )
+
+     print(message.sid)
+     ```
+
+4. **Set Up Webhooks**:
+   - Configure webhooks in Twilio to handle incoming messages and other events.
+
+---
+
+### **3. Other Alternatives**
+If you don't want to use the official WhatsApp Business API, there are some unofficial libraries and tools, but these are not recommended as they may violate WhatsApp's terms of service and could result in your account being banned.
+
+---
+
+### **Key Considerations**
+- **Pricing**: WhatsApp Business API and third-party providers like Twilio charge based on the number of messages sent and received.
+- **Compliance**: Ensure you comply with WhatsApp's policies and guidelines.
+- **User Consent**: Users must opt-in to receive messages from your business on WhatsApp.
+
+---
+
+By using the WhatsApp Business API or a provider like Twilio, you can seamlessly integrate WhatsApp into your web application and provide a great communication experience for your users.
+
+---
+
+The **WhatsApp Business API** itself is **not free**. WhatsApp charges businesses for sending messages to users, but receiving messages is generally free. Here's a breakdown of the costs and free options available:
+
+---
+
+### **1. WhatsApp Business API Costs**
+- **Message-Based Pricing**:
+  - WhatsApp charges businesses based on the number of **template messages** (outbound messages initiated by the business) and **session messages** (replies within a 24-hour window).
+  - Pricing varies by country. For example:
+    - In the US, sending a template message costs **$0.005 per message** (0.5 cents).
+    - In India, it costs **$0.0023 per message** (0.23 cents).
+  - Receiving messages from users is free.
+
+- **Business Solution Provider (BSP) Fees**:
+  - If you use a third-party provider like Twilio, Vonage, or MessageBird, they may charge additional fees for their services, such as API usage, setup, or support.
+
+---
+
+### **2. Free Options**
+If you're looking for a free way to use WhatsApp for your web application, your options are limited:
+
+#### **a. WhatsApp Business App**
+- The **WhatsApp Business App** is a free mobile app designed for small businesses.
+- It allows you to communicate with customers, set up automated replies, and create a business profile.
+- However, it is not an API and cannot be directly integrated into a web application.
+
+#### **b. Twilio WhatsApp Sandbox**
+- Twilio offers a **free WhatsApp sandbox** for testing purposes.
+- You can send and receive messages to a pre-approved number for free.
+- This is great for development and testing, but for production use, you'll need to upgrade to a paid plan.
+
+#### **c. Unofficial Libraries (Not Recommended)**
+- There are unofficial libraries and tools (e.g., `whatsapp-web.js`) that allow you to interact with WhatsApp programmatically.
+- These tools often rely on reverse-engineering WhatsApp's protocols and are **not officially supported**.
+- Using them may violate WhatsApp's terms of service, and your account could be banned.
+
+---
+
+### **3. Cost-Effective Solutions**
+If you're looking for a low-cost solution:
+- Use the **WhatsApp Business API** with a provider like Twilio or WATI.
+- Start with the **Twilio WhatsApp Sandbox** for free testing.
+- Optimize your messaging to reduce costs (e.g., use session messages instead of template messages whenever possible).
+
+---
+
+### **Summary**
+- The WhatsApp Business API is **not free**, but it is the official and most reliable way to integrate WhatsApp into your web application.
+- Free options like the WhatsApp Business App or Twilio's sandbox are limited and not suitable for production use.
+- Always ensure compliance with WhatsApp's policies to avoid account bans.
+
+If you're just starting out, I recommend using the **Twilio WhatsApp Sandbox** for testing and then transitioning to the paid API for production use.5:["$","$Ld",null,{"content":"$e","data":{"date":"2025-02-12T15:56:33+0530","draft":true,"title":"Whatsapp"}}]
+b:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+9:[["$","meta","0",{"charSet":"utf-8"}],["$","title","1",{"children":"Kavindu Udara"}],["$","meta","2",{"name":"description","content":"This is my personal website I use to showcase my projects and blogs."}],["$","link","3",{"rel":"icon","href":"/me/favicon.ico","type":"image/x-icon","sizes":"16x16"}]]
+7:null

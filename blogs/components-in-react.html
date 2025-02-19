@@ -1,0 +1,123 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="preload" as="image" href="https://avatars.githubusercontent.com/u/155027870?v=4"/><link rel="stylesheet" href="/me/_next/static/css/2ea1e1ce088a1881.css" data-precedence="next"/><link rel="stylesheet" href="/me/_next/static/css/12c033eb3dc8055a.css" data-precedence="next"/><link rel="preload" as="script" fetchPriority="low" href="/me/_next/static/chunks/webpack-30f11a584e4235ac.js"/><script src="/me/_next/static/chunks/4bd1b696-aaf09b882924c802.js" async=""></script><script src="/me/_next/static/chunks/517-61d17bd65f182962.js" async=""></script><script src="/me/_next/static/chunks/main-app-df5134c7fa6be6cf.js" async=""></script><script src="/me/_next/static/chunks/173-ba153405bf2e16a5.js" async=""></script><script src="/me/_next/static/chunks/app/blogs/page-a10b7c3bdac66571.js" async=""></script><script src="/me/_next/static/chunks/795d4814-6ed8d3b2717688f6.js" async=""></script><script src="/me/_next/static/chunks/8e1d74a4-cfd329457e90dfbc.js" async=""></script><script src="/me/_next/static/chunks/528-a5c0d2acc96ad623.js" async=""></script><script src="/me/_next/static/chunks/457-aa1fa21876c7c3cd.js" async=""></script><script src="/me/_next/static/chunks/app/blogs/%5Bslug%5D/page-acd2720b24fcd3fa.js" async=""></script><title>Kavindu Udara</title><meta name="description" content="This is my personal website I use to showcase my projects and blogs."/><link rel="icon" href="/me/favicon.ico" type="image/x-icon" sizes="16x16"/><script src="/me/_next/static/chunks/polyfills-42372ed130431b0a.js" noModule=""></script></head><body class="__variable_a48e27 __variable_c96e19 antialiased pt-24"><header class="fixed top-0 left-0 w-full backdrop-blur-md p-4 z-20 rounded-b-lg"><div class="flex items-center justify-around w-full"><div class="w-36"><a class="text-xl gradient-text" href="/me">Kavindu Udara</a></div><div class="flex justify-evenly w-1/2"><ul class="flex flex-wrap gap-8 font-semibold"><li class="cursor-pointer gradient-text"><a href="/me/blogs">blog</a></li><li><a href="/me/projects">projects</a></li><li><a href="/me">Contact</a></li></ul></div><div class="w-18 h-18 rounded-full bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 "><img class="w-12 h-12 rounded-full border-2 border-transparent cursor-pointer" src="https://avatars.githubusercontent.com/u/155027870?v=4" alt="Kavindu Udara"/></div></div></header><div class="max-w-4xl mx-auto p-8"><div class="markdown-container"><div class="flex flex-wrap items-center justify-start gap-4 mb-5"><button class="p-4 rounded-lg cursor-pointer gradient-bg"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M257.5 445.1l-22.2 22.2c-9.4 9.4-24.6 9.4-33.9 0L7 273c-9.4-9.4-9.4-24.6 0-33.9L201.4 44.7c9.4-9.4 24.6-9.4 33.9 0l22.2 22.2c9.5 9.5 9.3 25-.4 34.3L136.6 216H424c13.3 0 24 10.7 24 24v32c0 13.3-10.7 24-24 24H136.6l120.5 114.8c9.8 9.3 10 24.8.4 34.3z"></path></svg></button><h1 class="text-4xl gradient-text ">Components in React</h1></div><blockquote class="underline font-semibold">01 December 2024</blockquote><hr/><div class="prose"><p>React components are the building blocks of React applications. They allow developers to break the UI into reusable, independent pieces.</p>
+<hr/>
+<h3>Functional Components vs Class Components</h3>
+<table><thead><tr><th><strong>Aspect</strong></th><th><strong>Functional Components</strong></th><th><strong>Class Components</strong></th></tr></thead><tbody><tr><td><strong>Definition</strong></td><td>Plain JavaScript functions that return JSX.</td><td>ES6 classes that extend <code>React.Component</code>.</td></tr><tr><td><strong>State</strong></td><td>Uses the <code>useState</code> and <code>useEffect</code> hooks (introduced in React 16.8).</td><td>Uses <code>this.state</code> for managing state.</td></tr><tr><td><strong>Lifecycle Methods</strong></td><td>Replaced by hooks like <code>useEffect</code>.</td><td>Explicit lifecycle methods like <code>componentDidMount</code>.</td></tr><tr><td><strong>Syntax</strong></td><td>Simpler and more concise.</td><td>More verbose due to class structure.</td></tr><tr><td><strong>Performance</strong></td><td>Generally lighter and faster.</td><td>Slightly heavier because of class overhead.</td></tr><tr><td><strong>Example</strong></td><td></td><td></td></tr><tr><td>Functional Component:</td><td>Class Component:</td><td></td></tr><tr><td>```jsx</td><td>```jsx</td><td></td></tr><tr><td>function Greet() {</td><td>class Greet extends React.Component {</td><td></td></tr><tr><td>return <code>&lt;h1&gt;Hello&lt;/h1&gt;</code>;</td><td>render() {</td><td></td></tr><tr><td>}</td><td>return <code>&lt;h1&gt;Hello&lt;/h1&gt;</code>;</td><td></td></tr><tr><td>```</td><td>}</td><td></td></tr></tbody></table>
+<hr/>
+<h3>When to Use?</h3>
+<ul>
+<li>Use functional components whenever possible; they are the modern and preferred approach. Class components are now rarely used in new projects.</li>
+</ul>
+<hr/>
+<h3>How to Create and Export Components</h3>
+<ol>
+<li>
+<p>Creating a Functional Component</p>
+<pre><code class="language-jsx">// Greet.jsx
+function Greet() {
+return &lt;h1&gt;Hello, World!&lt;/h1&gt;;
+}
+export default Greet;
+</code></pre>
+</li>
+<li>
+<p>Creating a Class Component</p>
+<pre><code class="language-jsx">// Welcome.jsx
+import React, { Component } from &#x27;react&#x27;;
+class Welcome extends Component {
+render() {
+    return &lt;h1&gt;Welcome to React!&lt;/h1&gt;;
+    }
+}
+export default Welcome;
+</code></pre>
+</li>
+<li>
+<p>Named Exports
+You can export multiple components from a file:</p>
+</li>
+</ol>
+<pre><code class="language-jsx">// Greetings.jsx
+export function Hello() {
+    return &lt;h1&gt;Hello!&lt;/h1&gt;;
+}
+
+export function Goodbye() {
+    return &lt;h1&gt;Goodbye!&lt;/h1&gt;;
+}
+
+</code></pre>
+<hr/>
+<h3>Importing Components and Using Them Inside Other Components</h3>
+<ol>
+<li>Default Export
+Import and use a default exported component</li>
+</ol>
+<pre><code class="language-jsx">import Greet from &#x27;./Greet&#x27;;
+
+function App() {
+    return (
+        &lt;div&gt;
+            &lt;Greet /&gt;
+        &lt;/div&gt;
+    );
+}
+export default App;
+
+</code></pre>
+<ol start="2">
+<li>Named Exports
+Import and use named exported components</li>
+</ol>
+<pre><code class="language-jsx">import { Hello, Goodbye } from &#x27;./Greetings&#x27;;
+
+function App() {
+    return (
+        &lt;div&gt;
+            &lt;Hello /&gt;
+            &lt;Goodbye /&gt;
+        &lt;/div&gt;
+    );
+}
+export default App;
+</code></pre>
+<ol start="3">
+<li>Aliasing Components
+Rename components during import</li>
+</ol>
+<pre><code class="language-jsx">import { Hello as Hi } from &#x27;./Greetings&#x27;;
+
+function App() {
+    return &lt;Hi /&gt;;
+}
+export default App;
+</code></pre>
+<ol start="4">
+<li>Composing Components
+Use components inside other components to build a hierarchy</li>
+</ol>
+<pre><code class="language-jsx">import Greet from &#x27;./Greet&#x27;;
+
+function Header() {
+    return (
+        &lt;header&gt;
+            &lt;Greet /&gt;
+            &lt;h2&gt;This is a header&lt;/h2&gt;
+        &lt;/header&gt;
+    );
+}
+
+export default Header;
+</code></pre>
+<hr/>
+<h3>Summary</h3>
+<ul>
+<li><strong>Functional Components</strong> are the modern standard due to hooks and simplicity.</li>
+<li>Components can be exported as default or named exports.</li>
+<li>You can compose a rich UI by importing and using components inside other components.<br/>
+<!-- -->This modular structure makes React scalable and maintainable.</li>
+</ul>
+<hr/>
+<h1>References</h1>
+<ul>
+<li><a href="https://www.freecodecamp.org/news/function-component-vs-class-component-in-react/">https://www.freecodecamp.org/news/function-component-vs-class-component-in-react/</a></li>
+</ul></div></div><div class="flex justify-between mt-8"><button class="px-4 py-2 rounded-lg cursor-pointer  bg-gradient-to-r from-purple-400 via-pink-500 to-red-500"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M257.5 445.1l-22.2 22.2c-9.4 9.4-24.6 9.4-33.9 0L7 273c-9.4-9.4-9.4-24.6 0-33.9L201.4 44.7c9.4-9.4 24.6-9.4 33.9 0l22.2 22.2c9.5 9.5 9.3 25-.4 34.3L136.6 216H424c13.3 0 24 10.7 24 24v32c0 13.3-10.7 24-24 24H136.6l120.5 114.8c9.8 9.3 10 24.8.4 34.3z"></path></svg></button><button class="px-4 py-2 rounded-lg cursor-pointer  bg-gradient-to-r from-purple-400 via-pink-500 to-red-500"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path fill="none" d="M0 0h24v24H0V0z"></path><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"></path></svg></button></div></div><script src="/me/_next/static/chunks/webpack-30f11a584e4235ac.js" async=""></script><script>(self.__next_f=self.__next_f||[]).push([0])</script><script>self.__next_f.push([1,"1:\"$Sreact.fragment\"\n2:I[8173,[\"173\",\"static/chunks/173-ba153405bf2e16a5.js\",\"156\",\"static/chunks/app/blogs/page-a10b7c3bdac66571.js\"],\"\"]\n3:I[5244,[],\"\"]\n4:I[3866,[],\"\"]\n6:I[6213,[],\"OutletBoundary\"]\n8:I[6213,[],\"MetadataBoundary\"]\na:I[6213,[],\"ViewportBoundary\"]\nc:I[4835,[],\"\"]\n:HL[\"/me/_next/static/css/2ea1e1ce088a1881.css\",\"style\"]\n:HL[\"/me/_next/static/css/12c033eb3dc8055a.css\",\"style\"]\n"])</script><script>self.__next_f.push([1,"0:{\"P\":null,\"b\":\"llIlekknR3Jrs4wYTYkz9\",\"p\":\"/me\",\"c\":[\"\",\"blogs\",\"components-in-react\"],\"i\":false,\"f\":[[[\"\",{\"children\":[\"blogs\",{\"children\":[[\"slug\",\"components-in-react\",\"d\"],{\"children\":[\"__PAGE__\",{}]}]}]},\"$undefined\",\"$undefined\",true],[\"\",[\"$\",\"$1\",\"c\",{\"children\":[[[\"$\",\"link\",\"0\",{\"rel\":\"stylesheet\",\"href\":\"/me/_next/static/css/2ea1e1ce088a1881.css\",\"precedence\":\"next\",\"crossOrigin\":\"$undefined\",\"nonce\":\"$undefined\"}]],[\"$\",\"html\",null,{\"lang\":\"en\",\"children\":[\"$\",\"body\",null,{\"className\":\"__variable_a48e27 __variable_c96e19 antialiased pt-24\",\"children\":[[\"$\",\"header\",null,{\"className\":\"fixed top-0 left-0 w-full backdrop-blur-md p-4 z-20 rounded-b-lg\",\"children\":[\"$\",\"div\",null,{\"className\":\"flex items-center justify-around w-full\",\"children\":[[\"$\",\"div\",null,{\"className\":\"w-36\",\"children\":[\"$\",\"$L2\",null,{\"href\":\"/\",\"className\":\"text-xl gradient-text\",\"children\":\"Kavindu Udara\"}]}],[\"$\",\"div\",null,{\"className\":\"flex justify-evenly w-1/2\",\"children\":[\"$\",\"ul\",null,{\"className\":\"flex flex-wrap gap-8 font-semibold\",\"children\":[[\"$\",\"li\",null,{\"className\":\"cursor-pointer gradient-text\",\"children\":[\"$\",\"$L2\",null,{\"href\":\"/blogs\",\"children\":\"blog\"}]}],[\"$\",\"li\",null,{\"children\":[\"$\",\"$L2\",null,{\"href\":\"/projects\",\"children\":\"projects\"}]}],[\"$\",\"li\",null,{\"children\":[\"$\",\"$L2\",null,{\"href\":\"/\",\"children\":\"Contact\"}]}]]}]}],[\"$\",\"div\",null,{\"className\":\"w-18 h-18 rounded-full bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 \",\"children\":[\"$\",\"img\",null,{\"className\":\"w-12 h-12 rounded-full border-2 border-transparent cursor-pointer\",\"src\":\"https://avatars.githubusercontent.com/u/155027870?v=4\",\"alt\":\"Kavindu Udara\"}]}]]}]}],[\"$\",\"$L3\",null,{\"parallelRouterKey\":\"children\",\"segmentPath\":[\"children\"],\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$L4\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":[[],[\"$\",\"div\",null,{\"className\":\"flex flex-col items-center justify-center h-screen text-center\",\"children\":[[\"$\",\"h1\",null,{\"className\":\"text-3xl mb-1\",\"children\":\"404 - Page Not Found\"}],[\"$\",\"p\",null,{\"children\":\"Oops! The page you are looking for does not exist.\"}],[\"$\",\"$L2\",null,{\"href\":\"/\",\"children\":\"Go back to Home\"}]]}]],\"forbidden\":\"$undefined\",\"unauthorized\":\"$undefined\"}]]}]}]]}],{\"children\":[\"blogs\",[\"$\",\"$1\",\"c\",{\"children\":[null,[\"$\",\"$L3\",null,{\"parallelRouterKey\":\"children\",\"segmentPath\":[\"children\",\"blogs\",\"children\"],\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$L4\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":\"$undefined\",\"forbidden\":\"$undefined\",\"unauthorized\":\"$undefined\"}]]}],{\"children\":[[\"slug\",\"components-in-react\",\"d\"],[\"$\",\"$1\",\"c\",{\"children\":[null,[\"$\",\"$L3\",null,{\"parallelRouterKey\":\"children\",\"segmentPath\":[\"children\",\"blogs\",\"children\",\"$0:f:0:1:2:children:2:children:0\",\"children\"],\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$L4\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":\"$undefined\",\"forbidden\":\"$undefined\",\"unauthorized\":\"$undefined\"}]]}],{\"children\":[\"__PAGE__\",[\"$\",\"$1\",\"c\",{\"children\":[\"$L5\",[[\"$\",\"link\",\"0\",{\"rel\":\"stylesheet\",\"href\":\"/me/_next/static/css/12c033eb3dc8055a.css\",\"precedence\":\"next\",\"crossOrigin\":\"$undefined\",\"nonce\":\"$undefined\"}]],[\"$\",\"$L6\",null,{\"children\":\"$L7\"}]]}],{},null,false]},null,false]},null,false]},null,false],[\"$\",\"$1\",\"h\",{\"children\":[null,[\"$\",\"$1\",\"QQgdLsS4g6s5sC_DuuOTh\",{\"children\":[[\"$\",\"$L8\",null,{\"children\":\"$L9\"}],[\"$\",\"$La\",null,{\"children\":\"$Lb\"}],null]}]]}],false]],\"m\":\"$undefined\",\"G\":[\"$c\",\"$undefined\"],\"s\":false,\"S\":true}\n"])</script><script>self.__next_f.push([1,"d:I[6037,[\"479\",\"static/chunks/795d4814-6ed8d3b2717688f6.js\",\"711\",\"static/chunks/8e1d74a4-cfd329457e90dfbc.js\",\"528\",\"static/chunks/528-a5c0d2acc96ad623.js\",\"457\",\"static/chunks/457-aa1fa21876c7c3cd.js\",\"744\",\"static/chunks/app/blogs/%5Bslug%5D/page-acd2720b24fcd3fa.js\"],\"default\"]\ne:T1273,"])</script><script>self.__next_f.push([1,"\r\nReact components are the building blocks of React applications. They allow developers to break the UI into reusable, independent pieces.\r\n\r\n---\r\n### Functional Components vs Class Components\r\n\r\n| **Aspect**               | **Functional Components**                                             | **Class Components**                                 |\r\n| ------------------------ | --------------------------------------------------------------------- | ---------------------------------------------------- |\r\n| **Definition**           | Plain JavaScript functions that return JSX.                           | ES6 classes that extend `React.Component`.           |\r\n| **State**                | Uses the `useState` and `useEffect` hooks (introduced in React 16.8). | Uses `this.state` for managing state.                |\r\n| **Lifecycle Methods**    | Replaced by hooks like `useEffect`.                                   | Explicit lifecycle methods like `componentDidMount`. |\r\n| **Syntax**               | Simpler and more concise.                                             | More verbose due to class structure.                 |\r\n| **Performance**          | Generally lighter and faster.                                         | Slightly heavier because of class overhead.          |\r\n| **Example**              |                                                                       |                                                      |\r\n| Functional Component:    | Class Component:                                                      |                                                      |\r\n| ```jsx                   | ```jsx                                                                |                                                      |\r\n| function Greet() {       | class Greet extends React.Component {                                 |                                                      |\r\n| return `\u003ch1\u003eHello\u003c/h1\u003e`; | render() {                                                            |                                                      |\r\n| }                        | return `\u003ch1\u003eHello\u003c/h1\u003e`;                                              |                                                      |\r\n| ```                      | }                                                                     |                                                      |\r\n\r\n---\r\n### When to Use?\r\n\r\n- Use functional components whenever possible; they are the modern and preferred approach. Class components are now rarely used in new projects.\r\n\r\n---\r\n### How to Create and Export Components\r\n\r\n1. Creating a Functional Component\r\n\t```jsx\r\n\t// Greet.jsx\r\n\tfunction Greet() {\r\n    return \u003ch1\u003eHello, World!\u003c/h1\u003e;\r\n\t}\r\n\texport default Greet;\r\n\t```\r\n\t\r\n2. Creating a Class Component\r\n\t```jsx\r\n\t// Welcome.jsx\r\n\timport React, { Component } from 'react';\r\n\tclass Welcome extends Component {\r\n    render() {\r\n        return \u003ch1\u003eWelcome to React!\u003c/h1\u003e;\r\n\t    }\r\n\t}\r\n\texport default Welcome;\r\n\t```\r\n\r\n3. Named Exports\r\n\tYou can export multiple components from a file:\r\n```jsx\r\n// Greetings.jsx\r\nexport function Hello() {\r\n    return \u003ch1\u003eHello!\u003c/h1\u003e;\r\n}\r\n\r\nexport function Goodbye() {\r\n    return \u003ch1\u003eGoodbye!\u003c/h1\u003e;\r\n}\r\n\r\n```\r\n\r\n---\r\n### Importing Components and Using Them Inside Other Components\r\n\r\n1. Default Export\r\n\tImport and use a default exported component\r\n```jsx\r\nimport Greet from './Greet';\r\n\r\nfunction App() {\r\n    return (\r\n        \u003cdiv\u003e\r\n            \u003cGreet /\u003e\r\n        \u003c/div\u003e\r\n    );\r\n}\r\nexport default App;\r\n\r\n```\r\n\r\n2. Named Exports\r\n\tImport and use named exported components\r\n```jsx\r\nimport { Hello, Goodbye } from './Greetings';\r\n\r\nfunction App() {\r\n    return (\r\n        \u003cdiv\u003e\r\n            \u003cHello /\u003e\r\n            \u003cGoodbye /\u003e\r\n        \u003c/div\u003e\r\n    );\r\n}\r\nexport default App;\r\n```\r\n\r\n3. Aliasing Components\r\n\tRename components during import\r\n```jsx\r\nimport { Hello as Hi } from './Greetings';\r\n\r\nfunction App() {\r\n    return \u003cHi /\u003e;\r\n}\r\nexport default App;\r\n```\r\n\r\n4. Composing Components\r\n\tUse components inside other components to build a hierarchy\r\n```jsx\r\nimport Greet from './Greet';\r\n\r\nfunction Header() {\r\n    return (\r\n        \u003cheader\u003e\r\n            \u003cGreet /\u003e\r\n            \u003ch2\u003eThis is a header\u003c/h2\u003e\r\n        \u003c/header\u003e\r\n    );\r\n}\r\n\r\nexport default Header;\r\n```\r\n\r\n---\r\n### Summary\r\n\r\n- **Functional Components** are the modern standard due to hooks and simplicity.\r\n- Components can be exported as default or named exports.\r\n- You can compose a rich UI by importing and using components inside other components.  \r\n    This modular structure makes React scalable and maintainable.\r\n\r\n---\r\n# References\r\n\r\n- https://www.freecodecamp.org/news/function-component-vs-class-component-in-react/"])</script><script>self.__next_f.push([1,"5:[\"$\",\"$Ld\",null,{\"content\":\"$e\",\"data\":{\"date\":\"$D2024-12-01T15:55:51.000Z\",\"draft\":false,\"title\":\"Components in React\"}}]\n"])</script><script>self.__next_f.push([1,"b:[[\"$\",\"meta\",\"0\",{\"name\":\"viewport\",\"content\":\"width=device-width, initial-scale=1\"}]]\n9:[[\"$\",\"meta\",\"0\",{\"charSet\":\"utf-8\"}],[\"$\",\"title\",\"1\",{\"children\":\"Kavindu Udara\"}],[\"$\",\"meta\",\"2\",{\"name\":\"description\",\"content\":\"This is my personal website I use to showcase my projects and blogs.\"}],[\"$\",\"link\",\"3\",{\"rel\":\"icon\",\"href\":\"/me/favicon.ico\",\"type\":\"image/x-icon\",\"sizes\":\"16x16\"}]]\n"])</script><script>self.__next_f.push([1,"7:null\n"])</script></body></html>

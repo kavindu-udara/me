@@ -1,0 +1,154 @@
+1:"$Sreact.fragment"
+2:I[8173,["173","static/chunks/173-ba153405bf2e16a5.js","156","static/chunks/app/blogs/page-a10b7c3bdac66571.js"],""]
+3:I[5244,[],""]
+4:I[3866,[],""]
+6:I[6213,[],"OutletBoundary"]
+8:I[6213,[],"MetadataBoundary"]
+a:I[6213,[],"ViewportBoundary"]
+c:I[4835,[],""]
+:HL["/me/_next/static/css/2ea1e1ce088a1881.css","style"]
+:HL["/me/_next/static/css/12c033eb3dc8055a.css","style"]
+0:{"P":null,"b":"llIlekknR3Jrs4wYTYkz9","p":"/me","c":["","blogs","components-in-react"],"i":false,"f":[[["",{"children":["blogs",{"children":[["slug","components-in-react","d"],{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/me/_next/static/css/2ea1e1ce088a1881.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"en","children":["$","body",null,{"className":"__variable_a48e27 __variable_c96e19 antialiased pt-24","children":[["$","header",null,{"className":"fixed top-0 left-0 w-full backdrop-blur-md p-4 z-20 rounded-b-lg","children":["$","div",null,{"className":"flex items-center justify-around w-full","children":[["$","div",null,{"className":"w-36","children":["$","$L2",null,{"href":"/","className":"text-xl gradient-text","children":"Kavindu Udara"}]}],["$","div",null,{"className":"flex justify-evenly w-1/2","children":["$","ul",null,{"className":"flex flex-wrap gap-8 font-semibold","children":[["$","li",null,{"className":"cursor-pointer gradient-text","children":["$","$L2",null,{"href":"/blogs","children":"blog"}]}],["$","li",null,{"children":["$","$L2",null,{"href":"/projects","children":"projects"}]}],["$","li",null,{"children":["$","$L2",null,{"href":"/","children":"Contact"}]}]]}]}],["$","div",null,{"className":"w-18 h-18 rounded-full bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 ","children":["$","img",null,{"className":"w-12 h-12 rounded-full border-2 border-transparent cursor-pointer","src":"https://avatars.githubusercontent.com/u/155027870?v=4","alt":"Kavindu Udara"}]}]]}]}],["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[],["$","div",null,{"className":"flex flex-col items-center justify-center h-screen text-center","children":[["$","h1",null,{"className":"text-3xl mb-1","children":"404 - Page Not Found"}],["$","p",null,{"children":"Oops! The page you are looking for does not exist."}],["$","$L2",null,{"href":"/","children":"Go back to Home"}]]}]],"forbidden":"$undefined","unauthorized":"$undefined"}]]}]}]]}],{"children":["blogs",["$","$1","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","blogs","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["slug","components-in-react","d"],["$","$1","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","blogs","children","$0:f:0:1:2:children:2:children:0","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":["__PAGE__",["$","$1","c",{"children":["$L5",[["$","link","0",{"rel":"stylesheet","href":"/me/_next/static/css/12c033eb3dc8055a.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","$L6",null,{"children":"$L7"}]]}],{},null,false]},null,false]},null,false]},null,false],["$","$1","h",{"children":[null,["$","$1","QQgdLsS4g6s5sC_DuuOTh",{"children":[["$","$L8",null,{"children":"$L9"}],["$","$La",null,{"children":"$Lb"}],null]}]]}],false]],"m":"$undefined","G":["$c","$undefined"],"s":false,"S":true}
+d:I[6037,["479","static/chunks/795d4814-6ed8d3b2717688f6.js","711","static/chunks/8e1d74a4-cfd329457e90dfbc.js","528","static/chunks/528-a5c0d2acc96ad623.js","457","static/chunks/457-aa1fa21876c7c3cd.js","744","static/chunks/app/blogs/%5Bslug%5D/page-acd2720b24fcd3fa.js"],"default"]
+e:T1273,
+React components are the building blocks of React applications. They allow developers to break the UI into reusable, independent pieces.
+
+---
+### Functional Components vs Class Components
+
+| **Aspect**               | **Functional Components**                                             | **Class Components**                                 |
+| ------------------------ | --------------------------------------------------------------------- | ---------------------------------------------------- |
+| **Definition**           | Plain JavaScript functions that return JSX.                           | ES6 classes that extend `React.Component`.           |
+| **State**                | Uses the `useState` and `useEffect` hooks (introduced in React 16.8). | Uses `this.state` for managing state.                |
+| **Lifecycle Methods**    | Replaced by hooks like `useEffect`.                                   | Explicit lifecycle methods like `componentDidMount`. |
+| **Syntax**               | Simpler and more concise.                                             | More verbose due to class structure.                 |
+| **Performance**          | Generally lighter and faster.                                         | Slightly heavier because of class overhead.          |
+| **Example**              |                                                                       |                                                      |
+| Functional Component:    | Class Component:                                                      |                                                      |
+| ```jsx                   | ```jsx                                                                |                                                      |
+| function Greet() {       | class Greet extends React.Component {                                 |                                                      |
+| return `<h1>Hello</h1>`; | render() {                                                            |                                                      |
+| }                        | return `<h1>Hello</h1>`;                                              |                                                      |
+| ```                      | }                                                                     |                                                      |
+
+---
+### When to Use?
+
+- Use functional components whenever possible; they are the modern and preferred approach. Class components are now rarely used in new projects.
+
+---
+### How to Create and Export Components
+
+1. Creating a Functional Component
+	```jsx
+	// Greet.jsx
+	function Greet() {
+    return <h1>Hello, World!</h1>;
+	}
+	export default Greet;
+	```
+	
+2. Creating a Class Component
+	```jsx
+	// Welcome.jsx
+	import React, { Component } from 'react';
+	class Welcome extends Component {
+    render() {
+        return <h1>Welcome to React!</h1>;
+	    }
+	}
+	export default Welcome;
+	```
+
+3. Named Exports
+	You can export multiple components from a file:
+```jsx
+// Greetings.jsx
+export function Hello() {
+    return <h1>Hello!</h1>;
+}
+
+export function Goodbye() {
+    return <h1>Goodbye!</h1>;
+}
+
+```
+
+---
+### Importing Components and Using Them Inside Other Components
+
+1. Default Export
+	Import and use a default exported component
+```jsx
+import Greet from './Greet';
+
+function App() {
+    return (
+        <div>
+            <Greet />
+        </div>
+    );
+}
+export default App;
+
+```
+
+2. Named Exports
+	Import and use named exported components
+```jsx
+import { Hello, Goodbye } from './Greetings';
+
+function App() {
+    return (
+        <div>
+            <Hello />
+            <Goodbye />
+        </div>
+    );
+}
+export default App;
+```
+
+3. Aliasing Components
+	Rename components during import
+```jsx
+import { Hello as Hi } from './Greetings';
+
+function App() {
+    return <Hi />;
+}
+export default App;
+```
+
+4. Composing Components
+	Use components inside other components to build a hierarchy
+```jsx
+import Greet from './Greet';
+
+function Header() {
+    return (
+        <header>
+            <Greet />
+            <h2>This is a header</h2>
+        </header>
+    );
+}
+
+export default Header;
+```
+
+---
+### Summary
+
+- **Functional Components** are the modern standard due to hooks and simplicity.
+- Components can be exported as default or named exports.
+- You can compose a rich UI by importing and using components inside other components.  
+    This modular structure makes React scalable and maintainable.
+
+---
+# References
+
+- https://www.freecodecamp.org/news/function-component-vs-class-component-in-react/5:["$","$Ld",null,{"content":"$e","data":{"date":"$D2024-12-01T15:55:51.000Z","draft":false,"title":"Components in React"}}]
+b:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+9:[["$","meta","0",{"charSet":"utf-8"}],["$","title","1",{"children":"Kavindu Udara"}],["$","meta","2",{"name":"description","content":"This is my personal website I use to showcase my projects and blogs."}],["$","link","3",{"rel":"icon","href":"/me/favicon.ico","type":"image/x-icon","sizes":"16x16"}]]
+7:null
