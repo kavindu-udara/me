@@ -9,7 +9,7 @@
     "lint": "next lint",
     "export": "next export",
     "deploy": "next build && touch out/.nojekyll && gh-pages -d out",
-    "publish": "gh-pages -d out"
+    "publish": "touch out/.nojekyll && gh-pages -d out"
   },
   "dependencies": {
     "gray-matter": "^4.0.3",
