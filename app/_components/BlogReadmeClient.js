@@ -38,7 +38,7 @@ export default function BlogReadmeClient({ content, data }) {
             <div className='markdown-container'>
                 <div className='flex flex-wrap items-center justify-start gap-4 mb-5'>
                     <Button onClick={handleGoBack} text={<FaArrowLeft />} />
-                    <h1 className="text-4xl gradient-text ">{data.title}</h1>
+                    <h1 className="text-4xl dark:text-[#cfda5a] text-[#f3701e]">{data.title}</h1>
                 </div>
                 <blockquote className='underline font-semibold'>{formatDateString(data.date)}</blockquote>
                 <hr />

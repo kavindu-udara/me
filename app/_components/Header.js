@@ -3,7 +3,7 @@ import React from "react";
 
 const Header = () => {
   return (
-    <header className="fixed top-0 left-0 w-full backdrop-blur-md p-4 z-20 rounded-b-lg">
+    <header className="fixed top-0 left-0 w-full backdrop-blur-sm p-4 z-20 rounded-b-lg">
       <div className="flex items-center justify-around w-full">
         <div className="w-36" >
           <Link href={"/"} className="text-xl gradient-text">

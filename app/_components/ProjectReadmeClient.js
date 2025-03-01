@@ -34,10 +34,10 @@ export default function ProjectReadmeClient({ content, data }) {
     }
 
     return (
-        <div className="max-w-4xl mx-auto p-8">
+        <div className="max-w-4xl mx-auto p-8 z-10">
             <div className='markdown-container'>
                 <div className='flex flex-wrap items-center justify-center gap-4 mb-5'>
-                    <h1 className="text-4xl gradient-text text-center">{data.title}</h1>
+                    <h1 className="text-4xl topic-text text-center">{data.title}</h1>
                 </div>
 
                 <Image src={"../assets/projects/images/a379357e-b18b-4571-91fb-5b4add184f05.jpeg"} className="w-full h-[350px] object-cover bg-center bg-no-repeat overflow-hidden rounded-lg" alt={data.title} width={800} height={400} />

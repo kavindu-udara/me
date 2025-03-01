@@ -7,9 +7,9 @@
   --foreground: #261b00;
   --dark-color: #261c02;
   --primary-color: #2b1b01;
-  --secondary-color: #8a7145;
-  --topic-color: #281d03;
-  --highlight-color: #fbeed2;
+  --secondary-color: #4b607f;
+  --topic-color: #f3701e;
+  --highlight-color: #dacbb6;
   --quote-color: #f1e6c3;
   --element-background-color: #faf7ef;
   --element-foreground-color: #b6a87f;
@@ -18,30 +18,32 @@
 @media (prefers-color-scheme: dark) {
   :root {
     /* Dark Mode */
-    --background: #070707; 
-    --foreground: #fff5e6; /* Warm off-white/cream for text */
-    --dark-color: #faf4e6; /* Light beige (inverted from dark-color) */
-    --primary-color: #c2a15c; /* Golden accent (warmer version of your secondary) */
-    --secondary-color: #d4b87c; /* Muted gold (lighter than original secondary) */
-    --topic-color: #e0d5b3; /* Warm light taupe for subtler text */
-    --highlight-color: #3d2e0f; /* Deep brown for highlights (matches earthy theme) */
-    --quote-color: #a855f7; /* Dark brown quote background */
-    --element-background-color: #2d2508; /* Very dark brown for components */
-    --element-foreground-color: #d4c08c; /* Warm metallic gold for element text */
+    --background: #1a1a1a;
+    --foreground: #e8d8c9;
+    --dark-color: #faf4e6;
+    --primary-color: #f3701e;
+    --secondary-color: #4b607f;
+
+    --topic-color: #f3701e;
+    --highlight-color: #3d2e0f;
+    --quote-color: #4b607f;
+    --element-background-color: #2d2508;
+    --element-foreground-color: #d4c08c;
   }
 }
 
 /* gradient text effect */
 @layer components {
   .gradient-text {
-    @apply font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-500 to-red-500;
+    @apply font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#d1c6f3] to-[#e9bcac];
   }
-  .gradient-bg{
+  .gradient-bg {
     @apply bg-gradient-to-r from-purple-400 via-pink-500 to-red-500;
   }
 }
 
 body {
+  position: relative;
   color: var(--foreground);
   background: var(--background);
   font-family: var(--font-geist-sans), Helvetica, sans-serif;
@@ -58,6 +60,10 @@ hr {
 button {
   background-color: var(--element-background-color);
   color: var(--element-foreground-color);
+}
+
+.topic-text {
+  @apply text-[#f3701e];
 }
 
 /* code copy button */
@@ -77,10 +83,6 @@ button {
   @apply bg-pink-500;
 }
 
-.markdown-container strong {
-  color: var(--dark-color);
-}
-
 .markdown-container ul {
   margin-bottom: 20px;
 }
@@ -93,20 +95,21 @@ button {
 
 h1 {
   color: var(--topic-color);
-  @apply gradient-text;
-  font-size: 32px;
+  @apply font-bold text-[32px];
 }
 
 h2 {
-  /* color: var(--primary-color); */
-  @apply text-purple-400;
-  font-size: 28px;
+  color: var(--secondary-color);
+  @apply font-semibold text-[28px];
 }
 
 h3 {
-  @apply text-pink-500;
-  @apply font-semibold;
-  font-size: 18px;
+  /* text-[#cfda5a] */
+  @apply dark:text-[#7697a0] text-[#4b607f] font-semibold text-[18px];
+}
+
+strong{
+  @apply dark:text-[#7697a0] text-[#4b607f];
 }
 
 /* code */
@@ -137,23 +140,14 @@ h3 {
   border-radius: 10px;
 }
 
-.markdown-container pre::-webkit-scrollbar-thumb:hover {
-  @apply bg-pink-500;
-}
-
 .markdown-container pre code {
   background: transparent;
   color: var(--secondary-color);
 }
 
-.markdown-container code{
-  @apply bg-purple-300/30 rounded-full px-2;
+.markdown-container code {
+  @apply dark:bg-[#121312] dark:text-[#dacbb6] bg-[#dacbb6] rounded-full px-2;
 }
-
-/* code selection bg */
-/* .markdown-container pre code::selection { */
-  /* background-color: var(--element-foreground-color); */
-/* } */
 
 /* blockquote */
 blockquote {
@@ -164,8 +158,8 @@ blockquote {
 
 /* Bullets */
 /* bullet color */
-li{
-  @apply marker:text-red-500;
+li {
+  @apply marker:text-[#B83A2D];
 }
 
 /* LEVEL 1: Bullet */
@@ -232,7 +226,7 @@ li{
 }
 
 /* images */
-.markdown-container img{
+.markdown-container img {
   @apply rounded-lg align-middle my-8 shadow-lg;
 }
 
@@ -268,8 +262,7 @@ Link {
   text-decoration-thickness: 2px;
   text-decoration-skip-ink: none;
   font-weight: 600;
-  /* color: var(--secondary-color); */
-  @apply text-pink-500;
+  @apply text-[#4E6851];
 }
 
 a:hover,

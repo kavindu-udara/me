@@ -13,7 +13,7 @@ const readmes = fetchReadmes('public/assets/blogs/readmes');
       <div className="space-y-4">
         {readmes.map((readme, index) => (
           <div key={index}>
-            <h2>{readme.title}</h2>
+            <h2 className='dark:text-[#cfda5a] text-[#f3701e]'>{readme.title}</h2>
             <blockquote>{formatDateString(readme.date)}</blockquote>
             <ReactMarkdown className="prose my-5">
               {truncatedContent(readme.content)}
